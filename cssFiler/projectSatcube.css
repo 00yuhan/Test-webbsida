@@ -1,0 +1,101 @@
+:root {
+
+    --base-color: #cccbca;
+    --backgrund-body:#141414;
+    --backgrund-body-2: #2c2c2c;
+    --text-color: #444444;
+    --text-navbar: #F9F7F2;
+    --hover-color: #d8d8d8;
+    --primary-color: #C68F5A;
+    --secondary-color: #3B5A9A;
+    --color-1: #f5eee6;
+    --color-2: #F3F7F9;
+    --color-3: #F6F3F9;
+
+    --header-bg-color: 68, 68, 68; /* coral RGB */
+    --header-bg-alpha-start: 0;    /* fully transparent over hero */
+    --header-bg-alpha-end: 1;      /* fully opaque after hero */
+    --header-blur-max: 10;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--backgrund-body);
+}
+
+/*navigationbar*/
+
+header {
+    position: fixed; /* fixed keeps it above everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 2rem;
+   background-color: var(--backgrund-body-2);
+}
+
+header.is-solid {
+    background-color:  var(--text-color);
+    backdrop-filter: blur(8px);
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+header nav li {
+    font-family: Inter;
+    color: var(--text-navbar);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-navbar);
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    color:var(--hover-color)
+}
+
+
+nav li:first-child{
+    margin-right: auto;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-navbar);
+}
+
+
+/*content*/
+
+#frontSatcube img {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+
+    object-position: 50% 50%;
+}
