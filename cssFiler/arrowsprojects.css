@@ -27,3 +27,21 @@
 .scroll-indicator:hover{
     color: var(--hover-color);
 }
+
+
+/*fade arrows when scroll*/
+
+.sticky-wrapper {
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none;
+}
+
+.sticky-wrapper.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#lastarrow {
+    
+}
