@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectSatcube</title>
+
+    <link rel="stylesheet" href="cssFiler/root.css">
+    <link rel="stylesheet" href="cssFiler/projectSatcube.css">
+    <link rel="stylesheet" href="cssFiler/footer.css">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   
+    <header id="site-header">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="logo-link">YU-HAN HUA</a></li>
+                <li><a href="index.html#projects">PROJECTS</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--END OF NAVBAR-->
+    <section id="frontSatcube" class="frontSat">
+        <img src="bilder/satcube/ADAPTERMOTIONHERO.jpg">
+        <div class="heropageInfo">
+        </div>
+    </section>
+
+
+    <main class="introContainer">
+
+        <aside class="introSideBar">
+            <span class="contextLabel">CONTEXT</span>
+            <p>Current market solutions typically fall into two restrictive categories: rail-dependent systems that limit vehicle compatibility, or invasive hardware requiring permanent drilling. These constraints make rapid deployment in extreme environments nearly impossible.</p>
+            <div class="introGrid">
+                <div class="grid-item"><img src="bilder/satcube/mounting systems/utzoomad hook.png" onclick="openImage(this.src)" alt=""></div>
+                <div class="grid-item"><img src="bilder/satcube/mounting systems/thule hook.png" onclick="openImage(this.src)" alt=""></div>
+                <div class="grid-item"><img src="bilder/satcube/mounting systems/bolts into the car.png" onclick="openImage(this.src)" alt=""></div>
+                <div class="grid-item"><img src="bilder/satcube/mounting systems/bolt zoom in.png" onclick="openImage(this.src)" alt=""></div>
+            </div>
+            <p id="disclaimer">*Images generated with Nano Banana</p>
+        </aside>
+
+    <dialog id="imageDialog" onclick="this.close()">
+        <img id="fullImage" src="bilder/satcube/mounting systems/utzoomad hook.png" alt="Full size">
+    </dialog>
+    
+            <div class="introTextContent">
+                <h1 class="introTitle">A Roof Top Adapter for <a class="motionTag" href="https://satcube.com/products/motion" target="blank">Motion</a></h1>
+                <div class="introContentWrapper">
+                    <section class="box boxRole">
+                        <ul class="itemsList">
+                            <li><strong>ROLE:</strong> Industrial designer</li>
+                            <li><strong>TIMELINE:</strong> 16 weeks</li>
+                            <li><strong>TOOLS:</strong> Design Thinking, CAD, Blender</li>
+                        </ul>
+                    </section>
+
+                    <article class="box boxProblem">
+                        <h3 class="boxHeader">THE CHALLANGE</h3>
+                        <p>Standard satellite terminal mounts often require permanent vehicle modifications or complex tools. Because the terminal must operate in unpredictable, extreme environments, the goal was to develop an intuitive, high-strength adapter that secures to any vehicle surface in seconds without specialized knowledge.</p>
+                    </article>
+                </div>
+
+                <div class="researchIdeation">
+                    <h3>OVERVIEW OF THE FINAL RESULT</h3>
+                    <img id="descriptionImg" src="bilder/satcube/detail bild 3.png" alt="Exploded view of adapter" class="fullWidthImage">
+                    <h3>INTENDED INSTALLATION PROCEDURE</h3>
+                    <img src="bilder/satcube/ritningar hur man installerar adaptern.png" alt="Exploded view of adapter" class="fullWidthImage">
+                </div>
+            </div>
+    </main>
+    <!--FOOOOTER-->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>YU-HAN HUA</h3>
+                <p></p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <div class="footer-socials">
+                <ul>
+                    <li><a href="mailto:yuhanhua@outlook.com">yuhanhua@outlook.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/yuhanhua00/" target="_blank">LinkedIn</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yu-Han Hua. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script src="popup.js"></script>
+</body>
+</html>
