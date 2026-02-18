@@ -11,6 +11,9 @@
     width: 4rem;
     height: 100%;
     pointer-events: none;
+
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    opacity: 0; /* Hidden by default */
 }
 
 .project-nav-controls {
@@ -30,12 +33,6 @@
 
 
 /*fade arrows when scroll*/
-
-.sticky-wrapper {
-    transition: opacity 0.6s ease, visibility 0.6s ease;
-    opacity: 0; /* Hidden by default */
-    pointer-events: none;
-}
 
 .sticky-wrapper.is-active {
     opacity: 1;

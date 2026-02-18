@@ -92,23 +92,32 @@ document.querySelector('.logo-link').addEventListener('click', function(e) {
     });
 });
 
-
-/* ARROW FADE LOGIC*/
+/*ARROW FADE LOGIC*/
 
 const observerOptions = {
-    threshold: 0.4 // Shows arrows when 20% of the section is visible
+    root: null,
+    threshold: 0.5 // The arrows appear when 20% of the section is visible
 };
 
-const sectionObserver = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        // This looks for the "sticky-wrapper" inside the section we are currently viewing
+        // Find the sticky-wrapper inside this section
         const wrapper = entry.target.querySelector('.sticky-wrapper');
         
-        if (entry.isIntersecting) {
-            wrapper?.classList.add('is-active');
-        } else {
-            wrapper?.classList.remove('is-active');
+        if (wrapper) {
+            if (entry.isIntersecting) {
+                wrapper.classList.add('is-active');
+            } else {
+                wrapper.classList.remove('is-active');
+            }
         }
     });
 }, observerOptions);
+
+// Tell the observer to watch your sections
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+
 

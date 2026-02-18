@@ -152,10 +152,11 @@ nav li:first-child{
     margin-bottom: 1rem;
 }
 
-.researchIdeation img {
+.researchIdeation > img {
     width: 100%;
     height: 310px;
     object-fit: cover;
+    border-radius: 1rem;
 }
 
 #descriptionImg {
@@ -177,25 +178,42 @@ nav li:first-child{
     flex:2
 }
 
+#manual {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 .researchIdeation h3{
     padding-top: 2rem;
     padding-bottom: 1rem;
 }
 
+.paddingUnderImage {
+    margin-bottom: 1rem;
+}
+
+.fullWidthImage {
+    width: 100%;
+    display: block; /* This removes the "ghost" gap at the bottom of images */
+    margin-bottom: 0; /* Let the heading's margin handle the spacing */
+}
 
 .contextLabel {
     display: block;
     margin-bottom: 0rem;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
-.introSideBar p {
+.textSidebar {
     font-size: .8rem;
     margin-bottom: .5rem;
+    text-align: justify;
+    line-height: 1.2rem;
 }
 
 .introSideBar p:last-of-type {
+    font-size: .8rem;
     margin-top: .5rem;
     font-style: italic;
     opacity: .4;
@@ -209,17 +227,18 @@ nav li:first-child{
 .grid-item {
     border-radius: .2rem;
     overflow: hidden;
+    width: 100%;
 }
 
 .grid-item img {
     width: 100%;
     display: block;
-    transition: transform 0.3s ease; /* Makes the growth smooth */
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .grid-item:hover img {
-    transform: scale(1.3); /* The whole box grows 5% */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adds depth */
+    transform: scale(1.1);
 }
 
 .introGrid img {
@@ -235,8 +254,57 @@ nav li:first-child{
    gap: .5rem; 
 }
 
-.grid-item img {
-    cursor: pointer;
+.Evaluate-sidebar {
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 10rem;
+}
+
+.gridMockup {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.Evaluate-sidebar .grid-item {
+    flex: 1;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+
+.Evaluate-sidebar .grid-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.Evaluate-sidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.Evaluate-sidebar p {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    text-align: justify;
+}
+
+
+.showcasing-sidebar {
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 50rem;
+}
+
+.showcasing-sidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.showcasing-sidebar p {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
 }
 
 /* Style for the pop-up backdrop */
@@ -247,6 +315,7 @@ dialog::backdrop {
 
 dialog {
     border: none;
+    outline: none;
     border-radius: 1rem;
     padding: 0;
 
@@ -272,4 +341,46 @@ dialog img {
     max-height: 85vh;
     object-fit: contain;
     border-radius: 1rem;
+}
+
+.gridEval {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.gridEval img{
+    height: 310px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#finalprototyp {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.introTextContent ul {
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.showcasing-sidebar p:last-of-type {
+    margin-top: 0rem;
+    font-style: italic;
+    opacity: .4;
+    font-size: .8rem;
+}
+
+.bottomSpacer {
+    height: 15rem;
+}
+
+#disclaimer2 {
+    margin-top: .5rem;
 }
