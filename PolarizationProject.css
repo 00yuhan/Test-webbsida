@@ -1,0 +1,498 @@
+:root {
+
+    --base-color: #cccbca;
+    --backgrund-body:#141414;
+    --backgrund-body-2: #2c2c2c;
+    --backgrund-body-3: #292929;
+    --text-color: #444444;
+    --text-navbar: #F9F7F2;
+    --hover-color: #d8d8d8;
+    --primary-color: #C68F5A;
+    --secondary-color: #3B5A9A;
+    --color-1: #f5eee6;
+    --color-2: #F3F7F9;
+    --color-3: #F6F3F9;
+
+    --header-bg-color: 68, 68, 68; /* coral RGB */
+    --header-bg-alpha-start: 0;    /* fully transparent over hero */
+    --header-bg-alpha-end: 1;      /* fully opaque after hero */
+    --header-blur-max: 10;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--backgrund-body-2);
+}
+
+/*navigationbar*/
+
+header {
+    position: fixed; /* fixed keeps it above everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 2rem;
+   background-color: var(--backgrund-body-2);
+}
+
+header.is-solid {
+    background-color:  var(--text-color);
+    backdrop-filter: blur(8px);
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+header nav li {
+    font-family: Inter;
+    color: var(--text-navbar);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-navbar);
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    color:var(--hover-color)
+}
+
+
+nav li:first-child{
+    margin-right: auto;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--text-navbar);
+}
+
+
+/*content*/
+#frontImage img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+/*Text under hero image*/
+
+.motionTag {
+    text-decoration: underline;
+    color: #F15A22;
+    font-weight: bold;
+}
+
+.motionTag:hover {
+    color: #f04203;
+}
+
+.introTitle {
+    margin: auto;
+    max-width: 1200px;
+    padding-bottom: 2rem;
+    padding-top: 0rem;
+}
+
+
+.introContainer {
+    display: block;          /* Changed from flex to block */
+    position: relative;      /* Allows the sidebar to anchor to this container */
+    max-width: 1200px;       /* This defines your "Centerline" width */
+    margin: 0 auto;          /* Centers the main container */
+    padding: 2rem;
+    color: var(--base-color);
+    font-family: Inter;
+    line-height: 1.6;
+
+}
+
+.introSideBar {
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 20rem;
+}
+
+.introTextContent {
+    width: 100%;              /* Fills the 1200px container */
+    max-width: 1000px;        /* Keeping text at a readable width */
+    margin: 0 auto;          /* Centers the text inside the 1200px container */
+}
+
+.introContentWrapper{
+    margin: auto;
+    max-width: 1000px;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.researchIdeation > img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#descriptionImg {
+    height: 28rem;
+    object-fit: cover;
+    object-position: 50% 60%;
+    border-radius: .5rem;
+}
+
+.boxRole{
+    flex: 1;
+}
+
+.boxRole ul {
+    list-style-type: none;
+}
+
+.boxProblem{
+    flex:2
+}
+
+#manual {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+
+}
+
+.researchIdeation h3{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.paddingUnderImage {
+    margin-bottom: 1rem;
+}
+
+.fullWidthImage {
+    width: 100%;
+    display: block; /* This removes the "ghost" gap at the bottom of images */
+    margin-bottom: 0; /* Let the heading's margin handle the spacing */
+}
+
+.contextLabel {
+    display: block;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.textSidebar {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+    text-align: justify;
+    line-height: 1.2rem;
+}
+
+.introSideBar p:last-of-type {
+    font-size: .8rem;
+    margin-top: .5rem;
+    font-style: italic;
+    opacity: .4;
+    /* Your specific styles here */
+}
+
+.introGrid {
+    width: 18em;
+}
+
+.grid-item {
+    border-radius: .2rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.grid-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.introGrid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.bright {
+    filter: brightness(1.5);
+}
+
+.introGrid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: .5rem; 
+}
+
+.VideoSidebar {
+    position: absolute;      /* Take it out of the normal flow */
+    right: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 20rem;
+}
+
+.gridMockup {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.VideoSidebar .grid-item {
+    flex: 1;
+    height: 10rem;
+    margin-bottom: 1rem;
+}
+
+.VideoSidebar.grid-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.VideoSidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.VideoSidebar p {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+    text-align: justify;
+}
+
+
+.showcasing-sidebar {
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: -1rem;
+}
+
+#sideImgExploded {
+    border-radius: .5rem;
+}
+
+.showcasing-sidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.showcasing-sidebar p {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+}
+
+/* Style for the pop-up backdrop */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+    backdrop-filter: blur(5px);           /* Adds a nice modern blur to the background */
+}
+
+dialog {
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0;
+
+    /* This is the magic for centering */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Moves it back by half its own size */
+    margin: 0;
+
+/* Sizing constraints */
+    max-width: 85vw;
+    max-height: 85vh;
+    background: transparent; /* Makes the image the focus */
+    overflow: hidden;
+}
+
+dialog img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+.gridEval {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.gridEval img{
+    height: 310px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#finalprototyp {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.showcasing-sidebar p:last-of-type {
+    margin-top: 0rem;
+    font-style: italic;
+    opacity: .4;
+    font-size: .8rem;
+}
+
+.bottomSpacer {
+    height: 0rem;
+}
+
+#disclaimer2 {
+    margin-top: .5rem;
+}
+
+.demoVideo {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
+.Sidebar {
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 20rem;
+}
+
+.SidebarTemplates {
+    position: absolute;      /* Take it out of the normal flow */
+    right: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 0rem;
+    border-radius: 1rem;
+}
+
+#templatesBorder {
+       border-radius: .5rem;
+}
+
+.SidebarSlots {
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: -10rem;
+}
+
+.boxHeader {
+    padding-bottom: .1rem;
+}
+
+#magnetic{
+    width: 100%;
+    height: 29rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#ringlight {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#friction {
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#buttons {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#twist {
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#LaserCutting {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+}
+
+#prototypes {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
+.gradient-section {
+
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding-left: calc(50vw - 50%);
+    padding-right: calc(50vw - 50%);
+
+    background: linear-gradient(
+        to bottom, 
+        transparent, 
+        var(--backgrund-body-3) 0%, 
+        var(--backgrund-body-2) 100%, 
+        transparent
+    );
+    
+    padding-top: 1rem; 
+    padding-bottom: 10rem; 
+    margin-top: 2rem;
+}

@@ -1,0 +1,36 @@
+:root {
+
+    --base-color: #cccbca;
+    --backgrund-body:#141414;
+    --backgrund-body-2: #2c2c2c;
+    --text-color: #444444;
+    --text-navbar: #F9F7F2;
+    --text-navbar-darker: #81807d;
+    --hover-color: #d8d8d8;
+    
+    --primary-color: #C68F5A;
+    --secondary-color: #3B5A9A;
+    --color-1: #f5eee6;
+    --color-2: #F3F7F9;
+    --color-3: #F6F3F9;
+
+    --header-bg-color: 68, 68, 68; /* coral RGB */
+    --header-bg-alpha-start: 0;    /* fully transparent over hero */
+    --header-bg-alpha-end: 1;      /* fully opaque after hero */
+    --header-blur-max: 10;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    background-color: var(--backgrund-body);
+}

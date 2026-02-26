@@ -1,0 +1,44 @@
+
+#projects, #about {
+    position: relative;
+    min-height: 100vh;
+}
+
+.sticky-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 100%;
+    pointer-events: none;
+
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    opacity: 0; /* Hidden by default */
+}
+
+.project-nav-controls {
+    position: sticky;
+    top: 90vh;
+
+    color: var(--text-navbar-darker);
+
+    pointer-events: auto;
+
+    z-index: 1;
+}
+
+.scroll-indicator:hover{
+    color: var(--hover-color);
+}
+
+
+/*fade arrows when scroll*/
+
+.sticky-wrapper.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#lastarrow {
+    
+}

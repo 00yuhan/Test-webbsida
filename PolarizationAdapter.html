@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolarizationProject</title>
+
+    <link rel="stylesheet" href="cssFiler/root.css">
+    <link rel="stylesheet" href="cssFiler/PolarizationProject.css">
+    <link rel="stylesheet" href="cssFiler/footer.css">
+
+    <!--Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="site-header">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="logo-link">YU-HAN HUA</a></li>
+                <li><a href="index.html#projects">PROJECTS</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--END OF NAVBAR-->
+    <section id="frontImage">
+        <img src="bilder/Dental polarization bilder/theDentis.jpg">
+        <div class="heropageInfo">
+        </div>
+    </section>
+
+
+    <main class="introContainer">
+        <aside class="introSideBar">
+            <span class="contextLabel">CONTEXT</span>
+            <p class="textSidebar">With the help of a cross-polarized filter, it is possible to see much finer detail by
+                eliminating surface glare.</p>
+            <div id="bright" class="introGrid bright">
+                <div class="grid-item"><img src="bilder/Dental polarization bilder/rafflatglasNoPolar.jpg"
+                        onclick="openImage(this.src)" alt=""></div>
+                <div class="grid-item"><img src="bilder/Dental polarization bilder/rafflatglasPolar.jpg"
+                        onclick="openImage(this.src)" alt=""></div>
+                <div class="grid-item"><img src="bilder/Dental polarization bilder/tandreNOPolar.jpg"
+                        onclick="openImage(this.src)" alt=""></div>
+                <div class="grid-item"><img src="bilder/Dental polarization bilder/tandrePolar.jpg"
+                        onclick="openImage(this.src)" alt=""></div>
+            </div>
+            <p id="disclaimer">*The images shows how surface glare is reduced on both textured glass and dental enamel.
+            </p>
+        </aside>
+
+        <aside class="VideoSidebar">
+            <span class="contextLabel">Product Demo</span>
+            <p class="textSidebar"></p>
+            <div class="gridMockup">
+                <video class="demoVideo" autoplay muted loop playsinline preload="metadata" controls>
+                    <source src="bilder/Dental polarization bilder/filmer/demovideo.mp4" type="video/mp4">
+                </video>
+            </div>
+        </aside>
+
+        <dialog id="imageDialog" onclick="this.close()">
+            <img id="fullImage" src="bilder/" alt="Full size">
+        </dialog>
+
+        <div class="introTextContent">
+            <h1 class="introTitle">Cross-Polorized Photography Tool</h1>
+            <div class="introContentWrapper">
+                <section class="box boxRole">
+                    <ul class="itemsList">
+                        <h3 class="boxHeader">PROJECT OVERVIEW</h3>
+                        <li><strong>ROLE:</strong> Product Developer</li>
+                        <li><strong>TIMELINE:</strong> Ongoing</li>
+                        <li><strong>TOOLS:</strong> CAD, 3D-Printing</li>
+                    </ul>
+                </section>
+
+                <article class="box boxProblem">
+                    <h3 class="boxHeader">THE CHALLANGE</h3>
+                    <p>Develop a tool for capturing standard and polarized dental images that eliminates complex
+                        installation.</p>
+                </article>
+            </div>
+
+            <div class="researchIdeation">
+                <h3>The Cross-Polorization Tool</h3>
+                <img id="descriptionImg" src="bilder/Dental polarization bilder/Produkten.JPG" alt=""
+                    class="fullWidthImage">
+                <br>
+                <img id="manual" src="bilder/Dental polarization bilder/produkten isar.JPG" alt=""
+                    class="fullWidthImage">
+                <p><br>The tool consists of two primary components: a base mount designed for semi-permanent attachment
+                    to the ring flash, and a removable cap featuring an integrated polarized acrylic filter. This second
+                    component can be mounted and dismounted via a twist-lock mechanism, similar to a standard lens
+                    hood.<br><br>
+                </p>
+
+
+
+
+                <div class="gradient-section">
+
+
+
+                    <br>
+                    <h1>How It Was Made</h1><br>
+                    <img id="ringlight" class="paddingUnderImage" src="bilder/Dental polarization bilder/Macroring.JPG"
+                        alt="Image of the Flashligth that the products holds on to.">
+                    <p>While there are many flashlights available, this design specifically fits a Meke Macro Ring Lite.
+                        Consequently, all shapes and dimensions are based on its exact measurements.</p>
+                    <br>
+                    <img id="magnetic" src="bilder/Dental polarization bilder/magnetics.JPG"
+                        alt="early itterations, showcasing how they used magnets as a mechanism."
+                        class="fullWidthImage">
+
+
+                    <p><br>Many existing solutions use magnets because they offer several benefits: they snap quickly
+                        into
+                        place and are easy to remove, making them very user-friendly. In my initial designs, the first
+                        iterations used magnets and worked quite well.
+
+                        However, this meant the magnets had to be purchased and installed, adding extra steps to the
+                        manufacturing process. Furthermore, they didn't feel secure enough for my taste. There had to be
+                        another way. <br><br>
+                    </p>
+
+                    <img id="friction" class="paddingUnderImage" src="bilder/Dental polarization bilder/friction.JPG"
+                        alt="">
+                    <p>
+                        Instead of magnets, I experimented with small 'nooks' to hold the end part securely. While this
+                        solution worked to keep the component latched, it wasn't nearly as quick as the magnetic
+                        version.
+                        This made switching between polarized and non-polarized light a challenge.
+                        To solve this, I tried to make the entire product removable, while matching the efficiency of
+                        magnets.
+                    </p>
+                    <br>
+
+                    <aside class="SidebarSlots">
+                        <span class="contextLabel">SideSlots </span>
+                        <p class="textSidebar">The chamfer and side slots make it both easy and possible to snap and
+                            secure
+                            the product into place.</p>
+                        <div class="gridMockup">
+                            <div class="grid-item"><img src="bilder/Dental polarization bilder/chamfer.JPG"
+                                    onclick="openImage(this.src)" alt=""></div>
+                            <div class="grid-item"><img src="bilder/Dental polarization bilder/protudingPeg.JPG"
+                                    onclick="openImage(this.src)" alt=""></div>
+                        </div>
+                    </aside>
+
+                    <img id="buttons" src="bilder/Dental polarization bilder/buttons.JPG" alt="" class="fullWidthImage">
+
+
+                    <p>
+                        <br>The side slots made it possible to secure the product to the ring light very quickly and
+                        smoothly. However, it was not easily removable, unless you had tiny fingers or long sturdy
+                        nails. To
+                        counter this, I designed and tested several button shapes. Ultimately, although the buttons made
+                        the
+                        mount easier to remove, the process still wasn't efficient enough. So back to the drawing
+                        board!<br><br>
+                    </p>
+                    <img id="twist" src="bilder/Dental polarization bilder/twist 2.JPG" alt="" class="fullWidthImage">
+                    <p>
+                        <br>The solution was right under my nose all along: the same mechanism used for lens hoods. This
+                        approach makes mounting and dismounting the end cap quick and efficient. It is a user-friendly
+                        system that requires no external partsm, like magnets, and no extra installation steps. While it
+                        is
+                        admittedly not quite as lightning-fast as magnets, the added security and manufacturing
+                        simplicity
+                        outweigh that single trade-off, and with futher itterations it might become even more efficient
+                        ;).<br><br>
+                    </p>
+
+                    <aside class="SidebarTemplates">
+                        <span class="contextLabel">Templates</span>
+                        <p class="textSidebar">Templates for cutting acrylic and polarized sheets more accurately.</p>
+                        <div id="templatesBorder" class="grid-item"><img
+                                src="bilder/Dental polarization bilder/Mallar.JPG" onclick="openImage(this.src)" alt="">
+                        </div>
+                    </aside>
+
+                    <div class="gridEval">
+                        <img src="bilder/Dental polarization bilder/cuttingOutThePolarized.JPG" alt=""
+                            class="fullWidthImage">
+                        <img src="bilder/Dental polarization bilder/cuttingOutThePolorizedSAW.JPG" alt=""
+                            class="fullWidthImage">
+                    </div>
+
+                    <br>
+                    <p>Working with polarized sheets was a major challenge. Standard films are easy to source and cut,
+                        but
+                        they are too flimsy and warp easily, affecting image quality. Since sturdier materials like
+                        polarized acrylic aren't readily available to consumers, and glass is too difficult to cut, I
+                        tried
+                        laminating a polarizing film onto an acrylic sheet. However, this introduced new issues: trapped
+                        air
+                        bubbles and the difficulty of precision cutting with a coping saw. Ideally, I'd use pre-cut,
+                        professional polarized glass.</p>
+                    <br>
+
+                    <div class="gridEval">
+                        <img id="lyftaupp" src="bilder/Dental polarization bilder/laser cutting.JPG"
+                            alt="Exploded view of adapter" class="fullWidthImage">
+                        <img src="bilder/Dental polarization bilder/lasercutParts.JPG" alt="Exploded view of adapter"
+                            class="fullWidthImage">
+                    </div>
+                    <br>
+                    <p>
+                        Ultimately, the solution involved carefully applying the polarized sheet onto a cleaned,
+                        dust-free
+                        acrylic base. Once applied, a laser cutter was used to achieve a perfect shape. This method
+                        ensured
+                        minimal air bubbles and a snug fit within the 3D-printed component, resulting in the highest
+                        possible quality.
+                        <br><br>
+                        Special attention was paid to the notch in the circular center; this feature allows for a
+                        90-degree
+                        rotation to achieve the cross-polarization effect. If this alignment is off, the filtration
+                        efficiency drops significantly.
+                        <br><br>
+                        This was the most difficult phase of the project because precision was critical to its success.
+                        Using a manual saw made it nearly impossible to maintain the tight tolerances required for a
+                        proper
+                        fit and the correct angle. The laser cutter eliminated these issues. Although I was reluctant to
+                        rely on it because it is a "bottleneck" that neither I nor the average user can easily access,
+                        the
+                        results were undeniable. In the end, the laser cutter provided a level of precision that would
+                        be
+                        very difficult to achieve with a handsaw or even a mill.
+                    </p><br>
+
+                    <img id="prototypes" class="fullWidthImage, paddingUnderImage"
+                        src="bilder/Dental polarization bilder/prototypes.JPG" alt="">
+
+                    <aside class="showcasing-sidebar">
+                        <div id="sideImgExploded" class="grid-item"><img
+                                src="bilder/Dental polarization bilder/exploded.JPG" onclick="openImage(this.src)"
+                                alt="">
+                        </div>
+                        <p id="disclaimer2">Exploded view of all the parts.</p>
+                    </aside>
+
+                    <p>
+                        This project has taken much longer than I anticipated, with many more iterations than expected,
+                        and
+                        it is still ongoing. I know there are many parts I can still improve, simplify, change, or
+                        entirely
+                        rethink; it is a living project. However, it works and it's a great tool, even if it is a bit
+                        over-engineered (hehe). Through this, I have gained invaluable experience and learned plenty of
+                        tricks regarding 3D modeling, 3D printing, and general engineering problem-solving. It was time
+                        and
+                        effort well spent!
+                        <br><br>
+                        Special thanks to my to my brother for being my primary user and main source of information on How
+                        the tool will be used. Most importantly, thanks to him for planting the seed of this project in my head!
+                    </p>
+
+                </div>
+                <div class="bottomSpacer"></div>
+            </div>
+        </div>
+
+    </main>
+    <!--FOOOOTER-->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>YU-HAN HUA</h3>
+                <p></p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Get in Touch</h4>
+                <div class="footer-socials">
+                    <ul>
+                        <li><a href="mailto:yuhanhua@outlook.com">yuhanhua@outlook.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/yuhanhua00/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yu-Han Hua. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
