@@ -1,6 +1,5 @@
 
 .projects-section {
-    position: relative;
     min-height: 100vh;
     padding-bottom: 100px;
 
@@ -17,7 +16,9 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    width: 1200px;
+    margin:auto;
     gap: 2rem;
     padding: 2rem;
 }
@@ -35,15 +36,14 @@
 
     margin-bottom: 3rem;
 }
-*/
 
 .project-card:hover {
-    transform: translateY(-10px); /* Lifts the card up on hover */
+    transform: translateY(-3px); /* Lifts the card up on hover */
 }
 
 .project-image {
     position: relative;
-    height: 120px;
+    height: 220px;
     overflow: hidden;
 }
 
@@ -74,8 +74,4 @@
     font-size: 1rem;
     color: var(--base-color);
     margin: 0;
-}
-
-.project-card:nth-child(3) img {
-    object-position: 50% 54%;
 }

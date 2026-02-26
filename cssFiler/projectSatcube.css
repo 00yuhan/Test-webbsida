@@ -363,13 +363,6 @@ dialog img {
     object-fit: cover;
 }
 
-.introTextContent ul {
-    margin-left: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-
 .showcasing-sidebar p:last-of-type {
     margin-top: 0rem;
     font-style: italic;
