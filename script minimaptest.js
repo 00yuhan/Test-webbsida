@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.3, rootMargin: "0px 0px -100px 0px"});
 
-    const aboutSection = document.getElementById('aboutImgText');
+    const aboutSection = document.getElementById('bildtextcontainer');
     if (aboutSection) projectRevealObserver.observe(aboutSection);
 
     document.querySelectorAll('.project-card').forEach(card => {

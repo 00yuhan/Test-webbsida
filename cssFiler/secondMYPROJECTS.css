@@ -54,6 +54,12 @@
     overflow: hidden; /* This is the most important line */
     isolation: isolate; /* Forces a clean stacking context */
     mask-image: -webkit-radial-gradient(white, black); /* Fixes a specific Safari bug with border-radius + overflow */
+
+    /**BOARDER RIM POP**/
+    border: 0px solid rgba(255, 255, 255, 0.575); /* Only 8% white */
+    background-color: var(--backgrund-body-2); /* Use your lighter grey */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /**BOARDER RIM POP**/
 }
 
 /* THE APPEAR STATE (Triggered by JS) */
@@ -232,47 +238,57 @@
 
 /** about section**/
 
+
 #about {
     display: flex;
     flex-direction: column;
-    /* Stacks title on top of content */
-    justify-content: flex-start;
-    /* Pushes everything to the top */
     align-items: center;
-    /* Centers horizontally */
-    min-height: auto;
-    /* Prevents it from forced stretching to 100vh */
+    padding-bottom: 8rem;
     padding-top: 8rem;
-    /* Adjust this for the space ABOVE the word ABOUT */
 }
 
-#aboutImgText {
+#aboutTitle {
+    padding: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--base-color);
+}
+
+#bildtextcontainer {
     display: flex;
-    /* This puts the items side-by-side */
-    align-items: stretch;
-    /* Keeps the text aligned to the top of the image */
-    gap: 3rem;
-    /* Creates space between the image and the text */
-    max-width: 1200px;
-    /* Matches your other container widths */
-    margin: 0 auto;
-    /* Centers the whole section on the page */
+    align-items: center;
+    gap: 2rem;
     padding: 2rem;
     border-radius: 1rem;
+    width: 80%;
+    max-width: 1200px;
     background-color: var(--backgrund-body-2);
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-#aboutImgText img {
-    width: 350px;
+#textBlock {
+    flex: 1;
+}
+
+#aboutbilden {
     height: auto;
-    /* Adjust this to control how much space the image takes */
-    /* Maintains aspect ratio */
+    width: 30%;
     border-radius: 1rem;
-    /* Keeps it consistent with your other styles */
-    object-fit: cover;
 }
 
-.section-title2 {
+.about-paragraph {
+    font-size: 1.2rem;
+    color: var(--base-color);
+    font-family: Inter;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+}
+
+#textblocktitle {
     text-align: left;
     font-size: 2rem;
     font-family: Inter;
@@ -280,32 +296,38 @@
     margin-bottom: 1rem;
 }
 
-.About-text {
-    padding-left: 1rem;
-    flex: 1;
-}
-
-.about-paragraph {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-    /* This creates the clear visual gap you're looking for */
-    color: var(--base-color);
-    font-family: Inter;
-}
-
-
-#aboutImgText {
-    /* INITIAL HIDDEN STATE */
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-#aboutImgText.appear {
+#bildtextcontainer.appear {
     opacity: 1;
     transform: translateY(0);
 }
+
+.button-container {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.cv-button {
+    padding: 0.8rem 1.8rem;
+    background-color: transparent;
+    color: var(--base-color);
+    border: 2px solid var(--base-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.cv-button:hover {
+    background-color: var(--base-color);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/** about section**/
 
 /** side projects section**/
 
@@ -313,7 +335,6 @@
     max-width: auto;
     margin: 0 auto;
     padding: 7rem 20px;
-    /* Match your other sections */
 }
 
 .sideProjectGrid {
@@ -357,11 +378,11 @@
     margin: 0 auto;
 }
 
-.sideProjectGrid img:nth-child(1) { transition-delay: .8s; }
-.sideProjectGrid img:nth-child(2) { transition-delay: .3s; }
-.sideProjectGrid img:nth-child(3) { transition-delay: .6s; }
-.sideProjectGrid img:nth-child(4) { transition-delay: .46s; }
-.sideProjectGrid img:nth-child(5) { transition-delay: .5s; }
+.sideProjectGrid img:nth-child(1) { transition-delay: .3s; }
+.sideProjectGrid img:nth-child(2) { transition-delay: .2s; }
+.sideProjectGrid img:nth-child(3) { transition-delay: .32s; }
+.sideProjectGrid img:nth-child(4) { transition-delay: .4s; }
+.sideProjectGrid img:nth-child(5) { transition-delay: .6s; }
 
 
 #sideProjects {
@@ -413,22 +434,11 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.close-btn {
-    position: absolute;
-    top: -50px;
-    right: 0;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-}
-
 /**Dialog content**/
+
 .dialog-content {
     display: flex;
-    flex-direction: column; /* Stacks text on top of image */
+    flex-direction: column-reverse; /* Stacks text on top of image */
     align-items: center;
     gap: 15px; /* Space between title and image */
 }
@@ -447,5 +457,6 @@
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/**Dialog content**/
 
 /**POPOUP DIALOG **/
