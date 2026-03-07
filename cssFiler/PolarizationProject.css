@@ -164,7 +164,7 @@ nav li:first-child{
     height: 28rem;
     object-fit: cover;
     object-position: 50% 60%;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 
 .boxRole{
@@ -203,7 +203,7 @@ nav li:first-child{
 
 .contextLabel {
     display: block;
-    margin-bottom: 0rem;
+    margin-bottom: .5rem;
     font-weight: bold;
     font-size: 1rem;
 }
@@ -213,9 +213,10 @@ nav li:first-child{
     margin-bottom: .5rem;
     text-align: justify;
     line-height: 1.2rem;
+    margin-top: .5rem;
 }
 
-.introSideBar p:last-of-type {
+#disclaimer {
     font-size: .8rem;
     margin-top: .5rem;
     font-style: italic;
@@ -262,8 +263,8 @@ nav li:first-child{
 }
 
 .VideoSidebar {
-    position: absolute;      /* Take it out of the normal flow */
-    right: -15em;             /* Push it to the left, outside the container */
+    position: absolute;
+    right: -15em;
     width: 18em;
     margin-top: 20rem;
 }
@@ -271,7 +272,6 @@ nav li:first-child{
 .gridMockup {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 .VideoSidebar .grid-item {
@@ -285,11 +285,6 @@ nav li:first-child{
     object-fit: cover;
 }
 
-.VideoSidebar span {
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-
 .VideoSidebar p {
     margin-bottom: 1rem;
     margin-top: 0rem;
@@ -301,47 +296,69 @@ nav li:first-child{
     position: absolute;      /* Take it out of the normal flow */
     left: -15em;             /* Push it to the left, outside the container */
     width: 18em;
-    margin-top: -1rem;
+    margin-top: -2rem;
+}
+
+.showcasing-sidebar2 {
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: -2rem;
 }
 
 #sideImgExploded {
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 
-.showcasing-sidebar span {
-    font-weight: bold;
-    font-size: 1.3rem;
-}
 
 .showcasing-sidebar p {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     margin-top: 0rem;
 }
 
+/**DIALOG DIALOG POPUP**/
 /* Style for the pop-up backdrop */
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
-    backdrop-filter: blur(5px);           /* Adds a nice modern blur to the background */
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better focus */
+    backdrop-filter: blur(10px);           /* Increased blur for a cleaner look */
 }
 
 dialog {
-    border: none;
-    outline: none;
+    border: none !important;    /* Added !important to kill the silver border */
+    outline: none !important;
     border-radius: 1rem;
     padding: 0;
 
-    /* This is the magic for centering */
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Moves it back by half its own size */
+    transform: translate(-50%, -50%); 
     margin: 0;
 
-/* Sizing constraints */
-    max-width: 85vw;
-    max-height: 85vh;
-    background: transparent; /* Makes the image the focus */
-    overflow: hidden;
+    max-width: 90vw;            /* Slightly wider for better viewing */
+    max-height: 90vh;
+    background: transparent; 
+    overflow: visible;          /* CHANGED: This allows the title to show outside the box */
+}
+
+/* NEW: This handles the stacking of Title and Image */
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;                  /* Space between title and image */
+}
+
+/* NEW: Styles the optional title */
+#dialogTitle {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 dialog img {
@@ -349,10 +366,13 @@ dialog img {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 85vh;
+    max-height: 80vh;          /* CHANGED: Shrunk slightly to make room for text */
     object-fit: contain;
     border-radius: 1rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Adds depth */
 }
+
+/**DIALOG DIALOG POPUP**/
 
 .gridEval {
     display:grid;
@@ -374,13 +394,6 @@ dialog img {
     object-fit: cover;
 }
 
-
-.showcasing-sidebar p:last-of-type {
-    margin-top: 0rem;
-    font-style: italic;
-    opacity: .4;
-    font-size: .8rem;
-}
 
 .bottomSpacer {
     height: 0rem;
@@ -410,12 +423,12 @@ dialog img {
     right: -15em;             /* Push it to the left, outside the container */
     width: 18em;
     margin-top: 0rem;
+}
+
+.SidebarTemplates img {
     border-radius: 1rem;
 }
 
-#templatesBorder {
-       border-radius: .5rem;
-}
 
 .SidebarSlots {
     position: absolute;      /* Take it out of the normal flow */
@@ -495,4 +508,12 @@ dialog img {
     padding-top: 1rem; 
     padding-bottom: 10rem; 
     margin-top: 2rem;
+}
+
+#YunengTag {
+    color: #FFD400;
+}
+
+.mainText {
+    text-align: justify;
 }

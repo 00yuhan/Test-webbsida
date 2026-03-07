@@ -1,4 +1,7 @@
 .site-footer {
+    position: relative; /* Required for z-index to work */
+    z-index: 1;        /* Higher than the minimap */
+    
     height: auto;      /* Force it to only be as tall as the content */
     min-height: 0;
     background-color: #0a0a0a; /* Slightly darker than your body for depth */

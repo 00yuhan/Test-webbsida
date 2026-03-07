@@ -3,7 +3,6 @@
     --base-color: #cccbca;
     --backgrund-body:#141414;
     --backgrund-body-2: #2c2c2c;
-    --backgrund-body-3: #292929;
     --text-color: #444444;
     --text-navbar: #F9F7F2;
     --hover-color: #d8d8d8;
@@ -92,9 +91,9 @@ nav li:first-child{
 
 
 /*content*/
-#frontSatcube img {
+#frontImage img {
     width: 100%;
-    height: 70vh;
+    height: 74vh;
     object-fit: cover;
     object-position: 50% 30%;
 }
@@ -132,13 +131,11 @@ nav li:first-child{
 }
 
 .introSideBar {
-    position: absolute;
-    left: -15em;
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
     width: 18em;
-    margin-top: 20.5rem;
+    margin-top: 20rem;
 }
-
-
 
 .introTextContent {
     width: 100%;              /* Fills the 1200px container */
@@ -165,8 +162,9 @@ nav li:first-child{
 #descriptionImg {
     height: 28rem;
     object-fit: cover;
-    object-position: 50% 60%;
+    object-position: 50% 50%;
     border-radius: 1rem;
+    background-color: #E8E0D2;;
 }
 
 .boxRole{
@@ -199,46 +197,38 @@ nav li:first-child{
     width: 100%;
     display: block; /* This removes the "ghost" gap at the bottom of images */
     margin-bottom: 0; /* Let the heading's margin handle the spacing */
-    height: 310px;
-    object-fit: cover;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
 }
 
-.fullWidthImage2 {
-    width: 100%;
-    display: block; /* This removes the "ghost" gap at the bottom of images */
-    margin-bottom: 0; /* Let the heading's margin handle the spacing */
-    height: 310px;
-    object-fit: cover;
-    border-radius: 1rem;
-}
 .contextLabel {
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: 0rem;
     font-weight: bold;
     font-size: 1rem;
 }
 
 .textSidebar {
     font-size: .8rem;
+    margin-bottom: .5rem;
     text-align: justify;
     line-height: 1.2rem;
-    margin-top: .5rem;
 }
 
-#disclaimer {
+.introSideBar p:last-of-type {
     font-size: .8rem;
-    margin-top: 0rem;
+    margin-top: .5rem;
     font-style: italic;
     opacity: .4;
+    /* Your specific styles here */
+}
+
+.introGrid {
+    width: 18em;
 }
 
 .grid-item {
-    border-radius: 1rem;
+    border-radius: .2rem;
     overflow: hidden;
     width: 100%;
-    margin-bottom: .5rem;
 }
 
 .grid-item img {
@@ -252,23 +242,6 @@ nav li:first-child{
     transform: scale(1.1);
 }
 
-.grid-item2 {
-    border-radius: .2rem;
-    overflow: hidden;
-    width: 100%;
-}
-
-.grid-item2 img {
-    width: 100%;
-    display: block;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.grid-item2:hover img {
-    transform: scale(1.1);
-}
-
 .introGrid img {
     width: 100%;
     height: auto;
@@ -277,20 +250,11 @@ nav li:first-child{
 }
 
 .introGrid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .5rem; 
-    margin-bottom: .5rem;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: .5rem; 
 }
 
-.introGridBot {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .5rem; 
-    margin-bottom: .5rem;
-}
 .Evaluate-sidebar {
     position: absolute;      /* Take it out of the normal flow */
     left: -15em;             /* Push it to the left, outside the container */
@@ -301,7 +265,7 @@ nav li:first-child{
 .gridMockup {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
 }
 
 .Evaluate-sidebar .grid-item {
@@ -315,6 +279,11 @@ nav li:first-child{
     object-fit: cover;
 }
 
+.Evaluate-sidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
 .Evaluate-sidebar p {
     margin-bottom: 1rem;
     margin-top: 0rem;
@@ -324,54 +293,45 @@ nav li:first-child{
 
 .showcasing-sidebar {
     position: absolute;      /* Take it out of the normal flow */
-    right: -15em;             /* Push it to the left, outside the container */
+    left: -15em;             /* Push it to the left, outside the container */
     width: 18em;
-    margin-top: 20.51rem;
+    margin-top: 50rem;
 }
 
-/**DIALOG DIALOG POPUP**/
+.showcasing-sidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.showcasing-sidebar p {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+}
+
 /* Style for the pop-up backdrop */
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better focus */
-    backdrop-filter: blur(10px);           /* Increased blur for a cleaner look */
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+    backdrop-filter: blur(5px);           /* Adds a nice modern blur to the background */
 }
 
 dialog {
-    border: none !important;    /* Added !important to kill the silver border */
-    outline: none !important;
+    border: none;
+    outline: none;
     border-radius: 1rem;
     padding: 0;
 
+    /* This is the magic for centering */
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%); /* Moves it back by half its own size */
     margin: 0;
 
-    max-width: 90vw;            /* Slightly wider for better viewing */
-    max-height: 90vh;
-    background: transparent; 
-    overflow: visible;          /* CHANGED: This allows the title to show outside the box */
-}
-
-/* NEW: This handles the stacking of Title and Image */
-.dialog-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;                  /* Space between title and image */
-}
-
-/* NEW: Styles the optional title */
-#dialogTitle {
-    color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0;
+/* Sizing constraints */
+    max-width: 85vw;
+    max-height: 85vh;
+    background: transparent; /* Makes the image the focus */
+    overflow: hidden;
 }
 
 dialog img {
@@ -379,18 +339,16 @@ dialog img {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 80vh;          /* CHANGED: Shrunk slightly to make room for text */
+    max-height: 85vh;
     object-fit: contain;
     border-radius: 1rem;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Adds depth */
 }
-
-/**DIALOG DIALOG POPUP**/
 
 .gridEval {
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    margin-bottom: .5rem;
 }
 
 .gridEval img{
@@ -406,43 +364,27 @@ dialog img {
     object-fit: cover;
 }
 
-#disclaimer2 {
-    font-size: .8rem;
+.showcasing-sidebar p:last-of-type {
     margin-top: 0rem;
-    margin-bottom: .5rem;
     font-style: italic;
     opacity: .4;
+    font-size: .8rem;
 }
 
 .bottomSpacer {
     height: 15rem;
 }
 
+#disclaimer2 {
+    margin-top: .5rem;
+}
 
-/*
-    box-sizing: border-box;
+#titleLink {
+    color: var(--base-color);
+}
+
+#idBox {
+    padding-bottom: 2rem;
+    background-color: #E8E0D2;
     border-radius: 1rem;
-    padding: 1.5rem;
-    background-color: var(--backgrund-body-3);
-    */
-
-
-.gradient-section {
-
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding-left: calc(50vw - 50%);
-    padding-right: calc(50vw - 50%);
-
-    background: linear-gradient(
-        to bottom, 
-        transparent, 
-        var(--backgrund-body-3) 0%, 
-        var(--backgrund-body-2) 100%, 
-        transparent
-    );
-    
-    padding-top: 1rem; 
-    padding-bottom: 10rem; 
-    margin-top: 2rem;
 }

@@ -1,11 +1,13 @@
 
-#projects, #about {
+#projects, #about, #sideProjects {
     position: relative;
     min-height: 100vh;
 }
 
 .sticky-wrapper {
     position: absolute;
+
+    z-index: 5;
     top: 0;
     right: 0;
     width: 4rem;
@@ -24,7 +26,7 @@
 
     pointer-events: auto;
 
-    z-index: 1;
+    z-index: 5;
 }
 
 .scroll-indicator:hover{
@@ -37,8 +39,4 @@
 .sticky-wrapper.is-active {
     opacity: 1;
     pointer-events: auto;
-}
-
-#lastarrow {
-    
 }

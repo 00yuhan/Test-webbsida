@@ -90,13 +90,20 @@ nav li:first-child{
     color: var(--text-navbar);
 }
 
+#frontImage {
+    display: flex;          /* Enables flexbox */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center;     /* Centers the image vertically (if needed) */
+    width: 100%;             /* Ensures the container spans the screen */
+    margin-top: 4rem;
+}
 
 /*content*/
-#frontSatcube img {
+#frontImage img {
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     object-fit: cover;
-    object-position: 50% 30%;
+    object-position: 50% 60%;
 }
 
 /*Text under hero image*/
@@ -132,13 +139,11 @@ nav li:first-child{
 }
 
 .introSideBar {
-    position: absolute;
-    left: -15em;
+    position: absolute;      /* Take it out of the normal flow */
+    left: -15em;             /* Push it to the left, outside the container */
     width: 18em;
-    margin-top: 20.5rem;
+    margin-top: 20rem;
 }
-
-
 
 .introTextContent {
     width: 100%;              /* Fills the 1200px container */
@@ -162,11 +167,11 @@ nav li:first-child{
     border-radius: 1rem;
 }
 
-#descriptionImg {
-    height: 28rem;
+#resultImg {
+    height: 80%;
     object-fit: cover;
     object-position: 50% 60%;
-    border-radius: 1rem;
+    border-radius: .5rem;
 }
 
 .boxRole{
@@ -202,43 +207,38 @@ nav li:first-child{
     height: 310px;
     object-fit: cover;
     border-radius: 1rem;
-    margin-bottom: 1rem;
 }
 
-.fullWidthImage2 {
-    width: 100%;
-    display: block; /* This removes the "ghost" gap at the bottom of images */
-    margin-bottom: 0; /* Let the heading's margin handle the spacing */
-    height: 310px;
-    object-fit: cover;
-    border-radius: 1rem;
-}
 .contextLabel {
     display: block;
-    margin-bottom: .5rem;
+    margin-bottom: 0rem;
     font-weight: bold;
     font-size: 1rem;
 }
 
 .textSidebar {
     font-size: .8rem;
+    margin-top: .5rem;
     text-align: justify;
     line-height: 1.2rem;
-    margin-top: .5rem;
 }
 
 #disclaimer {
     font-size: .8rem;
-    margin-top: 0rem;
+    margin-top: .5rem;
     font-style: italic;
     opacity: .4;
+    /* Your specific styles here */
+}
+
+.introGrid {
+    width: 18em;
 }
 
 .grid-item {
-    border-radius: 1rem;
+    border-radius: .2rem;
     overflow: hidden;
     width: 100%;
-    margin-bottom: .5rem;
 }
 
 .grid-item img {
@@ -252,23 +252,6 @@ nav li:first-child{
     transform: scale(1.1);
 }
 
-.grid-item2 {
-    border-radius: .2rem;
-    overflow: hidden;
-    width: 100%;
-}
-
-.grid-item2 img {
-    width: 100%;
-    display: block;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.grid-item2:hover img {
-    transform: scale(1.1);
-}
-
 .introGrid img {
     width: 100%;
     height: auto;
@@ -277,20 +260,11 @@ nav li:first-child{
 }
 
 .introGrid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .5rem; 
-    margin-bottom: .5rem;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: .5rem; 
 }
 
-.introGridBot {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: .5rem; 
-    margin-bottom: .5rem;
-}
 .Evaluate-sidebar {
     position: absolute;      /* Take it out of the normal flow */
     left: -15em;             /* Push it to the left, outside the container */
@@ -301,7 +275,7 @@ nav li:first-child{
 .gridMockup {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
 }
 
 .Evaluate-sidebar .grid-item {
@@ -315,6 +289,11 @@ nav li:first-child{
     object-fit: cover;
 }
 
+.Evaluate-sidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
 .Evaluate-sidebar p {
     margin-bottom: 1rem;
     margin-top: 0rem;
@@ -324,9 +303,19 @@ nav li:first-child{
 
 .showcasing-sidebar {
     position: absolute;      /* Take it out of the normal flow */
-    right: -15em;             /* Push it to the left, outside the container */
+    left: -15em;             /* Push it to the left, outside the container */
     width: 18em;
-    margin-top: 20.51rem;
+    margin-top: 50rem;
+}
+
+.showcasing-sidebar span {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.showcasing-sidebar p {
+    margin-bottom: 1rem;
+    margin-top: 0rem;
 }
 
 /**DIALOG DIALOG POPUP**/
@@ -389,12 +378,13 @@ dialog img {
 
 .gridEval {
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+    margin-bottom: .5rem;
 }
 
 .gridEval img{
-    height: 310px;
+    height: 180px;
     width: 100%;
     object-fit: cover;
     border-radius: 1rem;
@@ -406,26 +396,75 @@ dialog img {
     object-fit: cover;
 }
 
-#disclaimer2 {
-    font-size: .8rem;
+.showcasing-sidebar p:last-of-type {
     margin-top: 0rem;
-    margin-bottom: .5rem;
     font-style: italic;
     opacity: .4;
+    font-size: .8rem;
 }
 
 .bottomSpacer {
     height: 15rem;
 }
 
+#disclaimer2 {
+    margin-top: .5rem;
+}
 
-/*
-    box-sizing: border-box;
+
+
+
+#titleLinkk {
+    color: var(--base-color);
+}
+
+#titleLink {
+    color: var(--base-color);
+}
+
+#titleLinkke {
+    color: var(--base-color);
+}
+
+#cadmodel {
+    height: 25rem;
+}
+
+#buildingTheMinimoto {
+    height: 20rem;
+}
+
+.VideoSidebar {
+    position: absolute;      /* Take it out of the normal flow */
+    right: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 18rem;
+}
+
+.SidebarVideo {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
     border-radius: 1rem;
-    padding: 1.5rem;
-    background-color: var(--backgrund-body-3);
-    */
+}
 
+.VideoSidebar2 {
+    position: absolute;      /* Take it out of the normal flow */
+    right: -15em;             /* Push it to the left, outside the container */
+    width: 18em;
+    margin-top: 35rem;
+}
+
+.SidebarVideo2 {
+    height: 24rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.mainText {
+    text-align: justify;
+}
 
 .gradient-section {
 

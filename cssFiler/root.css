@@ -2,7 +2,9 @@
 
     --base-color: #cccbca;
     --backgrund-body:#141414;
+    --backgrund-body-gradient:#1f1e1e;
     --backgrund-body-2: #2c2c2c;
+    --backgrund-body-3: #292929;
     --text-color: #444444;
     --text-navbar: #F9F7F2;
     --text-navbar-darker: #81807d;
@@ -14,10 +16,17 @@
     --color-2: #F3F7F9;
     --color-3: #F6F3F9;
 
-    --header-bg-color: 68, 68, 68; /* coral RGB */
-    --header-bg-alpha-start: 0;    /* fully transparent over hero */
-    --header-bg-alpha-end: 1;      /* fully opaque after hero */
+    --header-bg-color: 45, 45, 45; 
+    --header-bg-alpha-start: 0;
+    --header-bg-alpha-end: 1; /* 0.95 looks better than 1 with blur */
     --header-blur-max: 10;
+
+    /**
+    --header-bg-color: 68, 68, 68;
+    --header-bg-alpha-start: 0;
+    --header-bg-alpha-end: 1;
+    --header-blur-max: 10;
+    *//
 }
 
 *{
