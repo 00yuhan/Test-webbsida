@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PolarizationProject</title>
+    <title>Cross_Polorized_Photography_Tool</title>
 
     <link rel="stylesheet" href="cssFiler/root.css">
     <link rel="stylesheet" href="cssFiler/PolarizationProject.css">
@@ -40,24 +40,26 @@
     <main class="introContainer">
         <aside class="introSideBar">
             <span class="contextLabel">CONTEXT</span>
-            <p class="textSidebar">With the help of a cross-polarized filter, it is possible to see much finer detail by
-                eliminating surface glare.</p>
+
             <div id="bright" class="introGrid bright">
                 <div class="grid-item"><img src="bilder/Dental polarization bilder/rafflatglasNoPolar.webp"
-                        onclick="openImage(this.src)" alt=""></div>
+                        onclick="openImage(this)" alt=""></div>
                 <div class="grid-item"><img src="bilder/Dental polarization bilder/rafflatglasPolar.webp"
-                        onclick="openImage(this.src)" alt=""></div>
+                        onclick="openImage(this)" alt=""></div>
                 <div class="grid-item"><img src="bilder/Dental polarization bilder/tandreNOPolar.webp"
-                        onclick="openImage(this.src)" alt=""></div>
+                        onclick="openImage(this)" alt=""></div>
                 <div class="grid-item"><img src="bilder/Dental polarization bilder/tandrePolar.webp"
-                        onclick="openImage(this.src)" alt=""></div>
+                        onclick="openImage(this)" alt=""></div>
             </div>
-            <p id="disclaimer">*The images shows how surface glare is reduced on both textured glass and dental enamel.
+            <p id="disclaimer">* Glare reduced both in textured glass and dental enamel.
             </p>
+
+                        <p class="textSidebar">With the help of a cross-polarized filter, it is possible to see much finer detail by
+                eliminating surface glare.</p>
         </aside>
 
         <aside class="VideoSidebar">
-            <span class="contextLabel">Product Demo</span>
+            <span class="contextLabel">DEMONSTRATION</span>
             <p class="textSidebar"></p>
             <div class="gridMockup">
                 <video class="demoVideo" autoplay muted loop playsinline preload="metadata" controls>
@@ -66,37 +68,38 @@
             </div>
         </aside>
 
-        <dialog id="imageDialog" onclick="this.close()">
-            <img id="fullImage" src="bilder/" alt="Full size">
-        </dialog>
-
         <div class="introTextContent">
-            <h1 class="introTitle">Cross-Polorized Photography Tool</h1>
+            <h1 class="introTitle">Custom-Made Photography Tool for <a id="YunengTag"
+                    href="https://www.aquadental.se/om-oss/vi-som-jobbar-har/yu-neng-hua" target="blank">Dr. Yu-Neng
+                    Hua</a></h1>
             <div class="introContentWrapper">
                 <section class="box boxRole">
+                    <h3 class="boxHeader">PROJECT OVERVIEW</h3>
                     <ul class="itemsList">
-                        <h3 class="boxHeader">PROJECT OVERVIEW</h3>
                         <li><strong>ROLE:</strong> Product Developer</li>
+                        <li><strong>TOOLS:</strong> CAD, 3D Printing</li>
                         <li><strong>TIMELINE:</strong> Ongoing</li>
-                        <li><strong>TOOLS:</strong> CAD, 3D-Printing</li>
                     </ul>
                 </section>
 
                 <article class="box boxProblem">
-                    <h3 class="boxHeader">THE CHALLANGE</h3>
-                    <p>Develop a tool for capturing standard and polarized dental images that eliminates complex
-                        installation.</p>
+                    <h3 class="boxHeader">THE CHALLENGE</h3>
+                    <p>To develop a tool that enables the capture of cross-polarized images to improve the precision of
+                        dental prostheses. The design should make it possible to switch between standard and
+                        cross-polarized modes.
+                    </p>
                 </article>
             </div>
 
             <div class="researchIdeation">
-                <h3>The Cross-Polorization Tool</h3>
+                <h3>THE CROSS-POLORIZATION TOOL</h3>
                 <img id="descriptionImg" src="bilder/Dental polarization bilder/Produkten.webp" alt=""
                     class="fullWidthImage">
                 <br>
                 <img id="manual" src="bilder/Dental polarization bilder/produkten isar.webp" alt=""
                     class="fullWidthImage">
-                <p><br>The tool consists of two primary components: a base mount designed for semi-permanent attachment
+                <p class="mainText"><br>The tool consists of two primary components: a base mount designed for
+                    semi-permanent attachment
                     to the ring flash, and a removable cap featuring an integrated polarized acrylic filter. This second
                     component can be mounted and dismounted via a twist-lock mechanism, similar to a standard lens
                     hood.<br><br>
@@ -113,15 +116,16 @@
                     <h1>How It Was Made</h1><br>
                     <img id="ringlight" class="paddingUnderImage" src="bilder/Dental polarization bilder/Macroring.webp"
                         alt="Image of the Flashligth that the products holds on to.">
-                    <p>While there are many flashlights available, this design specifically fits a Meke Macro Ring Lite.
+                    <p class="mainText">While there are many flashlights available, this design specifically fits a Meke
+                        Macro Ring Lite.
                         Consequently, all shapes and dimensions are based on its exact measurements.</p>
                     <br>
-                    <img id="magnetic" src="bilder/Dental polarization bilder/magnetics.webp"
-                        alt="early itterations, showcasing how they used magnets as a mechanism."
+                    <img id="magnetic" src="bilder/Dental polarization bilder/magnetics.webp" alt=""
                         class="fullWidthImage">
 
 
-                    <p><br>Many existing solutions use magnets because they offer several benefits: they snap quickly
+                    <p class="mainText"><br>Many existing solutions use magnets because they offer several benefits:
+                        they snap quickly
                         into
                         place and are easy to remove, making them very user-friendly. In my initial designs, the first
                         iterations used magnets and worked quite well.
@@ -133,7 +137,7 @@
 
                     <img id="friction" class="paddingUnderImage" src="bilder/Dental polarization bilder/friction.webp"
                         alt="">
-                    <p>
+                    <p class="mainText">
                         Instead of magnets, I experimented with small 'nooks' to hold the end part securely. While this
                         solution worked to keep the component latched, it wasn't nearly as quick as the magnetic
                         version.
@@ -144,22 +148,24 @@
                     <br>
 
                     <aside class="SidebarSlots">
-                        <span class="contextLabel">SideSlots </span>
-                        <p class="textSidebar">The chamfer and side slots make it both easy and possible to snap and
-                            secure
-                            the product into place.</p>
+                        <span class="contextLabel">SIDE SLOTS </span>
+ 
                         <div class="gridMockup">
                             <div class="grid-item"><img src="bilder/Dental polarization bilder/chamfer.webp"
-                                    onclick="openImage(this.src)" alt=""></div>
+                                    onclick="openImage(this)" alt=""></div>
                             <div class="grid-item"><img src="bilder/Dental polarization bilder/protudingPeg.webp"
-                                    onclick="openImage(this.src)" alt=""></div>
+                                    onclick="openImage(this)" alt=""></div>
                         </div>
+                                               <p class="textSidebar">The chamfer and side slots make it both easy and possible to snap and
+                            secure
+                            the product into place.</p>
                     </aside>
 
-                    <img id="buttons" src="bilder/Dental polarization bilder/buttons.webp" alt="" class="fullWidthImage">
+                    <img id="buttons" src="bilder/Dental polarization bilder/buttons.webp" alt=""
+                        class="fullWidthImage">
 
 
-                    <p>
+                    <p class="mainText">
                         <br>The side slots made it possible to secure the product to the ring light very quickly and
                         smoothly. However, it was not easily removable, unless you had tiny fingers or long sturdy
                         nails. To
@@ -169,7 +175,7 @@
                         board!<br><br>
                     </p>
                     <img id="twist" src="bilder/Dental polarization bilder/twist 2.webp" alt="" class="fullWidthImage">
-                    <p>
+                    <p class="mainText">
                         <br>The solution was right under my nose all along: the same mechanism used for lens hoods. This
                         approach makes mounting and dismounting the end cap quick and efficient. It is a user-friendly
                         system that requires no external partsm, like magnets, and no extra installation steps. While it
@@ -181,11 +187,13 @@
                     </p>
 
                     <aside class="SidebarTemplates">
-                        <span class="contextLabel">Templates</span>
-                        <p class="textSidebar">Templates for cutting acrylic and polarized sheets more accurately.</p>
-                        <div id="templatesBorder" class="grid-item"><img
-                                src="bilder/Dental polarization bilder/Mallar.webp" onclick="openImage(this.src)" alt="">
+                        <span class="contextLabel">TEMPLATES</span>
+                        
+                        <div class="grid-item"><img
+                                src="bilder/Dental polarization bilder/Mallar.webp" onclick="openImage(this)"
+                                alt="">
                         </div>
+                        <p class="textSidebar" id="templatesText">Templates for cutting acrylic and polarized sheets more accurately.</p>
                     </aside>
 
                     <div class="gridEval">
@@ -196,7 +204,8 @@
                     </div>
 
                     <br>
-                    <p>Working with polarized sheets was a major challenge. Standard films are easy to source and cut,
+                    <p class="mainText">Working with polarized sheets was a major challenge. Standard films are easy to
+                        source and cut,
                         but
                         they are too flimsy and warp easily, affecting image quality. Since sturdier materials like
                         polarized acrylic aren't readily available to consumers, and glass is too difficult to cut, I
@@ -214,7 +223,7 @@
                             class="fullWidthImage">
                     </div>
                     <br>
-                    <p>
+                    <p class="mainText">
                         Ultimately, the solution involved carefully applying the polarized sheet onto a cleaned,
                         dust-free
                         acrylic base. Once applied, a laser cutter was used to achieve a perfect shape. This method
@@ -238,18 +247,19 @@
                         very difficult to achieve with a handsaw or even a mill.
                     </p><br>
 
-                    <img id="prototypes" class="fullWidthImage, paddingUnderImage"
+                    <img id="prototypes" class="fullWidthImage paddingUnderImage"
                         src="bilder/Dental polarization bilder/prototypes.webp" alt="">
 
-                    <aside class="showcasing-sidebar">
+                    <aside class="showcasing-sidebar2">
+                        <span class="contextLabel">THE TOOL</span>
                         <div id="sideImgExploded" class="grid-item"><img
-                                src="bilder/Dental polarization bilder/exploded.webp" onclick="openImage(this.src)"
+                                src="bilder/Dental polarization bilder/exploded.webp" onclick="openImage(this)"
                                 alt="">
                         </div>
-                        <p id="disclaimer2">Exploded view of all the parts.</p>
+                        <p class="textSidebar">All the parts that make up the tool.</p>
                     </aside>
 
-                    <p>
+                    <p class="mainText">
                         This project has taken much longer than I anticipated, with many more iterations than expected,
                         and
                         it is still ongoing. I know there are many parts I can still improve, simplify, change, or
@@ -260,10 +270,11 @@
                         and
                         effort well spent!
                         <br><br>
-                        Special thanks to my to my brother for being my primary user and main source of information on How
-                        the tool will be used. Most importantly, thanks to him for planting the seed of this project in my head!
+                        Special thanks to my to my brother for being my primary user and main source of information on
+                        How
+                        the tool will be used. Most importantly, thanks to him for planting the seed of this project in
+                        my head!
                     </p>
-
                 </div>
                 <div class="bottomSpacer"></div>
             </div>
@@ -283,6 +294,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#sideProjects">Sides</a></li>
                     <li><a href="index.html#about">About</a></li>
                 </ul>
             </div>
@@ -302,6 +314,12 @@
             <p>&copy; 2026 Yu-Han Hua. All rights reserved.</p>
         </div>
     </footer>
+
+    <dialog id="imageDialog" onclick="if(event.target==this) this.close()">
+        <div class="dialog-content">
+            <img id="fullImage" src="/bilder/" alt="Full view">
+        </div>
+    </dialog>
 
     <script src="popup.js"></script>
 </body>

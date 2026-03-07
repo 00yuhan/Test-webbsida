@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 
     <link rel="stylesheet" href="cssFiler/root.css">
     <link rel="stylesheet" href="cssFiler/style2.css">
@@ -13,129 +14,267 @@
     <link rel="stylesheet" href="cssFiler/footer.css">
 
 
- <!--Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!--Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
-    <!--Front page, navbar och video-->
 
-    <header id="site-header">
-        <nav>
-            <ul>
-                <li><a href="#" class="logo-link">YU-HAN HUA</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#about">ABOUT</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav id="project-wheel">
+        <div class="wheel-track">
+            <a href="#project-1" class="wheel-item active" data-project="0">
+                <div class="wheel-dot"></div>
+                <span class="wheel-label"> Roof Top Adapter</span>
+
+            </a>
+            <a href="#project-2" class="wheel-item" data-project="1">
+                <div class="wheel-dot"></div>
+                <span class="wheel-label">Photography Tool</span>
+
+            </a>
+            <a href="#project-3" class="wheel-item" data-project="2">
+                <div class="wheel-dot"></div>
+                <span class="wheel-label"> Electric Minimoto</span>
+
+            </a>
+
+            <a href="#project-4" class="wheel-item" data-project="2">
+                <div class="wheel-dot"></div>
+                <span class="wheel-label"> Exterior Design of UAM</span>
+
+            </a>
+
+            <!--
+        <a href="#project-5" class="wheel-item" data-project="2">
+            <div class="wheel-dot"></div>
+            <span class="wheel-label"> Post-Harvest Barriers</span>
+        </a>
+    
+        <a href="#project-5" class="wheel-item" data-project="2">
+            <div class="wheel-dot"></div>
+            <span class="wheel-label"> Post-Harvest Barriers</span>
+        </a>
+-->
+
+        </div>
+    </nav>
+
+    <div id="content-to-mirror">
+        <!--Front page, navbar och video-->
+
+        <header id="site-header">
+            <nav>
+                <ul>
+                    <li><a href="#" class="logo-link">YU-HAN HUA</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#sideProjects">SIDES</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                </ul>
+            </nav>
+        </header>
 
 
-    <div id="frontPage" class="first-page">
-        <section class="hero" id="hero">
+        <div id="frontPage" class="first-page">
+            <section class="hero" id="hero">
                 <video autoplay muted loop playsinline preload="metadata">
                     <source src="videos/intro video 1.mp4" type="video/mp4">
                 </video>
                 <div id="hero-fade-wrapper">
                     <div class="hero-text" id="hero-text">
                         <h1>Welcome</h1>
-                        <p>On this website you can see my projects.<br>If you have any questions, requests, or want to collaboarion dont hesitate!</p>
+                        <p>On this website you can see my projects.<br>If you have any questions, requests, or want to
+                            collaboarion dont hesitate!</p>
                         <div class="scroll-indicator" onclick="scrollToNext('#projects')">
                             <div class="arrow"></div>
                         </div>
                     </div>
                 </div>
-        </section>
-    </div>
+            </section>
+        </div>
 
-    <!--PROJECT PAGE, SECOND PAGE-->
+        <!--PROJECT PAGE, SECOND PAGE-->
 
-    <section id="projects" class="projects-section">
+        <section id="projects" class="projects-section">
 
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
+            <h2 class="section-title">PROJECTS</h2>
+            <div class="projects-grid">
                 <!--PROJECT 1-->
-                <a href="ProjectSatcube.html" class="project-card">
+                <a id="project-1" href="ProjectSatcube.html" class="project-card">
                     <div class="project-image"><img src="bilder/satcube/ADAPTERMOTIONHERO.webp" alt="krabba"></div>
-                    <div class="project-info"><h3>Roof Top Adapter for Motion</h3><p>A project in collaboariton with Satcube</p></div>
+                    <div class="project-info">
+                        <h3>Roof Top Adapter for Motion</h3>
+                        <p>Developing a custom rooftop adapter in partnership with Satcube.</p>
+                    </div>
                 </a>
 
                 <!--PROJECT 2-->
-                <a href="PolarizationAdapter.html" class="project-card">
-                    <div class="project-image"><img src="bilder/Dental polarization bilder/theDentis.webp" alt="krabba"></div>
-                    <div class="project-info"><h3>Polarization Add On</h3><p>making it possible for better and more accurate prosthesis</p></div>
+                <a id="project-2" href="PolarizationAdapter.html" class="project-card">
+                    <div class="project-image"><img src="bilder/Dental polarization bilder/theDentis.webp" alt="krabba">
+                    </div>
+                    <div class="project-info">
+                        <h3>Custom-Made Photography Tool for Dr. Yu-Neng Hua</h3>
+                        <p>Designing a cross-polarization imaging tool to improve the precision and accuracy of dental
+                            prostheses.</p>
+                    </div>
                 </a>
 
-                <!--Placeholder project-->
-                <a href="ProjectMall.html" class="project-card">
+                <!--PROJECT 3-->
+                <a id="project-3" href="ElectricMiniMotorcyle.html" class="project-card">
+                    <div class="project-image"><img src="bilder/Electric Mini Motorcycle/frontElMini.webp"></div>
+                    <div class="project-info">
+                        <h3>Electric Mini Motorcyle</h3>
+                        <p> Constructing an electric motorcycle from the ground up, managing everything from chassis
+                            design to final assembly.</p>
+                    </div>
+                </a>
+
+                <!--PROJECT 4-->
+                <a id="project-4" href="UAM.html" class="project-card">
+                    <div class="project-image"><img src="bilder/UAM/UAMHEADERAI.webp"></div>
+                    <div class="project-info">
+                        <h3>Exterior Design of an Urban Air Mobility Vehicle</h3>
+                        <p> Designing the exterrior of an urban air mobility vehicle optimized for medical emergencies
+                            and public acceptance.</p>
+                    </div>
+                </a>
+
+                <!--
+                <a id="project-5" href="PostHarvestBarriers.html" class="project-card">
+                    <div class="project-image"><img src="bilder/PostHarvest/postHeader.webp" alt="krabba"></div>
+                    <div class="project-info"><h3>Post-Harvest Barriers: A Collaborative Study in Siaya, Kenya</h3><p>Collaborating with smallholder farmers in Siaya to identify post-harvest challenges and designing potential solutions</p></div>
+                </a>
+
+            -->
+
+                <!-- PostHarvestBarriers.html
+                <a id="project-5" href="PostHarvestBarriers.html" class="project-card">
                     <div class="project-image"><img src="bilder/sexy dog.jpg" alt="krabba"></div>
                     <div class="project-info"><h3>Placeholder</h3><p>Placeholder</p></div>
                 </a>
-        </div>        
-        <div class="sticky-wrapper">
-            <div class="project-nav-controls">
-                <div class="scroll-indicator scroll-up" onclick="scrollToNext('#hero')">
-                    <div class="arrow"></div>
-                </div>
-                <div class="scroll-indicator" onclick="scrollToNext('#about')">
-                    <div class="arrow"></div>
-                </div>
+                -->
             </div>
-        </div>A
-    </section>
-
-    <section id="about" class="aboutMe">
-            <img src="bilder/krabba.jpg">
-            <div class="About-text">
-                <h2 class="section-title">Who am i?</h2>
-                <p>Your description here...</p>
-                <a href="https://www.linkedin.com/in/yuhanhua00/" target="_blank" class="cta-button">LinkedIn</a>
-            </div>
-
-            <div id="arrows-about" class="sticky-wrapper">
+            <div class="sticky-wrapper">
                 <div class="project-nav-controls">
-                    <div class="scroll-indicator scroll-up" onclick="scrollToNext('#projects')">
+                    <div class="scroll-indicator scroll-up" onclick="scrollToNext('#hero')">
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="scroll-indicator" onclick="scrollToNext('#about')">
                         <div class="arrow"></div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <h3>YU-HAN HUA</h3>
-                <p></p>
-            </div>
+        <section id="sideProjects" class="projects-section">
+            <div id="sideProjectsW">
+                <h2 class="section-title">SIDE PROJECTS</h2>
+                <br>
+                <div class="sideProjectGrid">
+                    <img src="bilder/sideProjects/snorlax/SnorlaxGif.webp" 
+                        data-title="Snorlax Animation"
+                        onclick="openImage(this)">
+                    <img src="bilder/sideProjects/kruksupport/Kruksupport.webp"                         data-title="Pot support"
+                        onclick="openImage(this)">
+                    <img src="bilder/sideProjects/koksmobilhallare/koksmobilhallare.webp"                         data-title="Snorlax Animation"
+                        onclick="openImage(this)">
+                    <img src="bilder/sideProjects/Luftrenare/Luftrenare.webp"                         data-title="Snorlax Animation"
+                        onclick="openImage(this)">
+                </div>
 
-            <div class="footer-links">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div>
+                <dialog id="imageDialog" onclick="if(event.target==this) this.close()">
+                    <div class="dialog-content">
+                        <h3 id="dialogTitle"></h3><img id="fullImage" src="" alt="Full view">
+                    </div>
+                </dialog>
 
-            <div class="footer-contact">
-                <h4>Get in Touch</h4>
-                <div class="footer-socials">
-                <ul>
-                    <li><a href="mailto:yuhanhua@outlook.com">yuhanhua@outlook.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/yuhanhua00/" target="_blank">LinkedIn</a></li>
-                </ul>
+                <div class="sticky-wrapper">
+                    <div class="project-nav-controls">
+                        <div class="scroll-indicator scroll-up" onclick="scrollToNext('#projects')">
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="scroll-indicator" onclick="scrollToNext('#about')">
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2026 Yu-Han Hua. All rights reserved.</p>
-        </div>
-    </footer>
+        </section>
 
 
+        <section id="about" class="aboutMe">
+            <h2 class="section-title">ABOUT</h2>
+            <div id="aboutImgText">
+                <img src="bilder/AboutBildSpeglad.webp">
+                <div class="About-text">
+                    <h3 class="section-title2"> Yu-Han Hua
+                    </h3>
+                    <div id="aboutText">
+                        <p class="about-paragraph">I'm an Industrial Design Engineer with a passion for creating
+                            solutions that
+                            matter. I
+                            dive deep into problems, uncover real user needs, and translate those insights into tangible
+                            products.
+                        </p>
+                        <p class="about-paragraph">
+                            From early concept exploration to hands-on prototyping, I can bring any idea to life ;). I'm
+                            endlessly curious about how things work, and I tend to get nerdy about the mechanics and
+                            inner
+                            workings that make great design possible.
+                        </p>
+                        <p class="about-paragraph">
+                            Have an idea you want to bring to life? Contact me.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="arrows-about" class="sticky-wrapper">
+                <div class="project-nav-controls">
+                    <div class="scroll-indicator scroll-up" onclick="scrollToNext('#sideProjects')">
+                        <div class="arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>YU-HAN HUA</h3>
+                    <p></p>
+                </div>
 
-<script src="script.js"></script>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#sideProjects">Sides</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <div class="footer-socials">
+                        <ul>
+                            <li><a href="mailto:yuhanhua@outlook.com">yuhanhua@outlook.com</a></li>
+                            <li><a href="https://www.linkedin.com/in/yuhanhua00/" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Yu-Han Hua. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="script minimaptest.js"></script>
+        <script src="popup.js"></script>
+    </div>
 </body>
+
 </html>
