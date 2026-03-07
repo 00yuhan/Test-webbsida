@@ -1,0 +1,462 @@
+#site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000; /* Ensure this is higher than the project-wheel (1000) */
+    pointer-events: auto; /* Ensure you can still click the links */
+}
+
+.projects-section {
+    min-height: auto;
+    padding-top: 7rem;
+    background-color: var(--backgrund-body);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--base-color);
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    width: 1200px;
+    margin: auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+.project-card {
+    display: block;
+    position: relative;
+    border-radius: 1rem;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 4rem;
+
+    /* INITIAL HIDDEN STATE */
+    opacity: 0;
+    transform: translateY(30px) translateZ(0);
+
+    /* Unified transition for all states */
+    transition:
+        opacity 1s ease-out,
+        transform 1s cubic-bezier(0.2, 1, 0.3, 1),
+        background-color 0.3s ease;
+    pointer-events: none;
+
+    overflow: hidden; /* This is the most important line */
+    isolation: isolate; /* Forces a clean stacking context */
+    mask-image: -webkit-radial-gradient(white, black); /* Fixes a specific Safari bug with border-radius + overflow */
+
+    /**BOARDER RIM POP**/
+    border: 0px solid rgba(255, 255, 255, 0.575); /* Only 8% white */
+    background-color: var(--backgrund-body-2); /* Use your lighter grey */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /**BOARDER RIM POP**/
+}
+
+/* THE APPEAR STATE (Triggered by JS) */
+.project-card.appear {
+    opacity: 1; 
+    transform: translateY(0) translateZ(0);
+    pointer-events: auto;
+}
+
+/* THE HOVER STATE (Only active once appeared) */
+.project-card.appear:hover {
+    transform: translateY(-10px) translateZ(0);
+    transition-delay: 0s;
+}
+
+.project-card.appear:not(:hover) {
+    transition: transform 0.5s ease-out, opacity 1.2s ease-out;
+}
+
+/* Only change background color on hover */
+.project-card.appear:hover .project-info {
+    background-color: rgba(30, 30, 30, 0.8);
+}
+
+.project-image {
+    width: 100%;
+    height: 400px;
+    /* Increased height for better product showcase */
+    display: block;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    backdrop-filter: blur(5px) saturate(150%);
+    -webkit-backdrop-filter: blur(5px) saturate(150%);
+
+
+    background: rgba(15, 15, 15, 0.7);
+
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    padding: 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    outline: 1px solid transparent;
+    backface-visibility: hidden;
+
+    border-bottom-left-radius: inherit; /* Matches the card exactly */
+    border-bottom-right-radius: inherit;
+    
+    /* Ensure there's no tiny 1px gap */
+    margin-bottom: -1px; 
+    width: 101%; 
+    left: -0.5%;
+}
+
+.project-info p {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.project-info h3 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--base-color);
+    font-family: Inter;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: var(--base-color);
+    margin: 0;
+}
+
+.site-footer {
+    z-index: 10;
+}
+
+
+
+/**PROJECTWHEEL**/
+/**PROJECTWHEEL**/
+/**PROJECTWHEEL**/
+/**PROJECTWHEEL**/
+
+#project-wheel {
+    position: fixed;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-20px);
+    z-index: 1000;
+    opacity: 0;
+    /* transition: transform 0.6s ... (ONLY transition the movement) */
+}
+
+/* NEW: The class the JS will add */
+#project-wheel.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wheel-track {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* MUST match the 70px logic in JS (40 height + 30 gap) */
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    align-items: flex-start;
+}
+
+.wheel-item {
+    height: 40px;
+    /* Fixed height is crucial for accuracy */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.2;
+    transition: opacity 0.4s, transform 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.wheel-item.active {
+    opacity: 1;
+}
+
+.wheel-label {
+    color: var(--base-color);
+    font-size: 0.8rem;
+    margin-left: 0px;
+    font-family: 'Inter', sans-serif;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.wheel-item:hover .wheel-label,
+.wheel-item.active .wheel-label {
+    opacity: 10;
+}
+
+.wheel-dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--base-color);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.wheel-item.active .wheel-dot {
+    background-color: transparent;
+    border-color: var(--base-color);
+    box-shadow: 0 0 10px var(--base-color);
+}
+
+
+/** about section**/
+
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+}
+
+#aboutTitle {
+    padding: 0;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--base-color);
+}
+
+#bildtextcontainer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 80%;
+    max-width: 1200px;
+    background-color: var(--backgrund-body-2);
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+#textBlock {
+    flex: 1;
+}
+
+#aboutbilden {
+    height: auto;
+    width: 30%;
+    border-radius: 1rem;
+}
+
+.about-paragraph {
+    font-size: 1.2rem;
+    color: var(--base-color);
+    font-family: Inter;
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+}
+
+#textblocktitle {
+    text-align: left;
+    font-size: 2rem;
+    font-family: Inter;
+    color: var(--base-color);
+    margin-bottom: 1rem;
+}
+
+#bildtextcontainer.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.button-container {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.cv-button {
+    padding: 0.8rem 1.8rem;
+    background-color: transparent;
+    color: var(--base-color);
+    border: 2px solid var(--base-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.cv-button:hover {
+    background-color: var(--base-color);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/** about section**/
+
+/** side projects section**/
+
+#sideProjects {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 7rem 20px;
+}
+
+.sideProjectGrid {
+    display: block; 
+    column-count: 3;
+    column-gap: 20px;
+    width: 100%;
+}
+
+.sideProjectGrid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: .5rem;
+    transition: transform 1s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sideProjectGrid img {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease, transform 2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* The state triggered by JS */
+.sideProjectGrid img.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sideProjectGrid img.appear:hover {
+    transform: translateY(-10px) translateZ(0);
+
+    transition-delay: 0s;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+#sideProjectsW {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sideProjectGrid img:nth-child(1) { transition-delay: .3s; }
+.sideProjectGrid img:nth-child(2) { transition-delay: .2s; }
+.sideProjectGrid img:nth-child(3) { transition-delay: .32s; }
+.sideProjectGrid img:nth-child(4) { transition-delay: .4s; }
+.sideProjectGrid img:nth-child(5) { transition-delay: .6s; }
+
+
+#sideProjects {
+    background-color: #1a1a1a; 
+}
+
+
+/**POPOUP DIALOG **/
+
+#imageDialog {
+    /* 1. This overrides the browser's default 'absolute' position */
+    position: fixed; 
+    
+    /* 2. Standard centering math */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* 3. Reset all margins and borders */
+    margin: 0; 
+    border: none;
+    background: transparent;
+    padding: 0;
+    
+    /* 4. Ensure it doesn't scroll with the page content */
+    overflow: visible; 
+    border: none;
+    outline: none;
+}
+
+/* This styles the dark area behind the popup */
+#imageDialog::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+.dialog-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+}
+
+#fullImage {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 1rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/**Dialog content**/
+
+.dialog-content {
+    display: flex;
+    flex-direction: column-reverse; /* Stacks text on top of image */
+    align-items: center;
+    gap: 15px; /* Space between title and image */
+}
+
+#dialogTitle {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    animation: fadeIn 0.5s ease; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/**Dialog content**/
+
+/**POPOUP DIALOG **/
