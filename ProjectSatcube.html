@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roof_Top_Adapter</title>
 
+    <link rel="stylesheet" href="cssFiler/footer.css">
+    <link rel="stylesheet" href="cssFiler/header.css">
     <link rel="stylesheet" href="cssFiler/root.css">
     <link rel="stylesheet" href="cssFiler/projectSatcube.css">
-    <link rel="stylesheet" href="cssFiler/footer.css">
+    <link rel="stylesheet" href="cssFiler/media.css">
+
+
 
     <!--Fonts-->
     <link
@@ -24,6 +28,7 @@
             <ul>
                 <li><a href="index.html" class="logo-link">YU-HAN HUA</a></li>
                 <li><a href="index.html#projects">PROJECTS</a></li>
+                <li><a href="index.html#sideProjects">SIDES</a></li>
                 <li><a href="index.html#about">ABOUT</a></li>
             </ul>
         </nav>
@@ -38,6 +43,8 @@
 
 
     <main class="introContainer">
+
+        <button class="mobile-info-trigger left" onclick="openSidebar('context-popup')">?</button>
 
         <aside class="introSideBar">
             <span class="contextLabel">CONTEXT</span>
@@ -58,10 +65,14 @@
                 drilling. These constraints make rapid deployment in extreme environments nearly impossible.</p>
         </aside>
 
+        <button class="mobile-info-trigger right" onclick="openSidebar('team-popup')">
+            i
+        </button>
+
         <aside class="showcasing-sidebar">
             <span class="contextLabel">THE TEAM</span>
             <div class="grid-item"><img src="bilder/satcube/showcasing.webp" onclick="openImage(this)" alt=""></div>
-            <p id="disclaimer2">Jonna Stenlund, Edith Pålsson,<br>Yu-Han Hua, Ida Osterman</p>
+            <p class="disclaimer2">Jonna Stenlund, Edith Pålsson,<br>Yu-Han Hua, Ida Osterman</p>
             <p class="textSidebar">Final presentation at Satcube HQ.</p>
         </aside>
 
@@ -72,9 +83,9 @@
                 <section class="box boxRole">
                     <h3 class="boxHeader">PROJECT OVERVIEW</h3>
                     <ul class="itemsList">
-                        <li><strong>ROLE:</strong> Industrial designer</li>
-                        <li><strong>TOOLS:</strong> Design Thinking, CAD, Blender</li>
-                        <li><strong>TIMELINE:</strong> 16 weeks</li>
+                        <li><strong>ROLE:</strong> Industrial&nbsp;designer</li>
+                        <li><strong>TOOLS:</strong> Design&nbsp;Thinking, CAD, Blender</li>
+                        <li><strong>TIMELINE:</strong> 16&nbsp;weeks</li>
                     </ul>
                 </section>
 
@@ -127,6 +138,10 @@
                         alt="Exploded view of adapter">
                     <img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/prototyptestande.webp"
                         alt="Exploded view of adapter" class="fullWidthImage2">
+
+                    <button class="mobile-info-trigger" id="mockup-btn" onclick="openSidebar('mockup-popup')">
+                        M
+                    </button>
 
                     <aside class="Evaluate-sidebar">
                         <span class="contextLabel">MOCKUP</span>
@@ -248,12 +263,54 @@
         </div>
     </footer>
 
+    <dialog id="context-popup" class="mobile-sidebar-popup">
+    <div class="popup-inner">
+        <span class="contextLabel">CONTEXT</span>
+            <div class="introGrid">
+                <div class="grid-item2"><img src="bilder/satcube/mounting systems/utzoomad hook.webp"
+                        onclick="openImage(this)" alt=""></div>
+                <div class="grid-item2"><img src="bilder/satcube/mounting systems/thule hook.webp"
+                        onclick="openImage(this)" alt=""></div>
+                <div class="grid-item2"><img src="bilder/satcube/mounting systems/bolts into the car.webp"
+                        onclick="openImage(this)" alt=""></div>
+                <div class="grid-item2"><img src="bilder/satcube/mounting systems/bolt zoom in.webp"
+                        onclick="openImage(this)" alt=""></div>
+            </div>
+        <p class="textSidebar">Current market solutions typically fall into two restrictive categories:
+                rail-dependent systems that limit vehicle compatibility, or invasive hardware requiring permanent
+                drilling. These constraints make rapid deployment in extreme environments nearly impossible</p>
+    </div>
+    </dialog>
+
+    <dialog id="team-popup" class="mobile-sidebar-popup">
+    <div class="popup-inner">
+        <span class="contextLabel">THE TEAM</span>
+        <div class="grid-item">
+            <img src="bilder/satcube/showcasing.webp" alt=""></div>
+        <p class="disclaimer2">Jonna Stenlund, Edith Pålsson,<br>Yu-Han Hua, Ida Osterman</p>
+        <p class="textSidebar">Final presentation at Satcube HQ.</p>
+    </div>
+    </dialog>
+
+    <dialog id="mockup-popup" class="mobile-sidebar-popup">
+    <div class="popup-inner">
+        <span class="contextLabel">MOCKUP</span>
+        <div class="gridMockup">
+            <div class="grid-item2"><img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup building.webp" onclick="openImage(this)"></div>
+            <div class="grid-item2"><img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup builign 2.webp" onclick="openImage(this)"></div>
+        </div>
+        <p class="textSidebar">The mockup contains 20 kg sand to simulate the weight of Motion (the terminal).</p>
+    </div>
+    </dialog>
+
     <dialog id="imageDialog" onclick="if(event.target==this) this.close()">
         <div class="dialog-content">
             <img id="fullImage" src="/bilder/" alt="Full view">
         </div>
     </dialog>
     <script src="popup.js"></script>
+
 </body>
 
 </html>
+

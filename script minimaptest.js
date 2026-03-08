@@ -121,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
         projectRevealObserver.observe(card);
     });
 
-        // ADD THIS PART:
     document.querySelectorAll('.sideProjectGrid img').forEach(img => {
         projectRevealObserver.observe(img);
     });
@@ -137,6 +136,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.3 });
 
     document.querySelectorAll('section').forEach(section => arrowObserver.observe(section));
+
+        /* --- Inside your DOMContentLoaded block --- */
+    const menu = document.querySelector('#mobile-menu');
+    const menuLinks = document.querySelector('.nav-list');
+    // Select all the links inside the mobile menu
+    const navItems = document.querySelectorAll('.nav-list a');
+
+    if (menu && menuLinks) {
+        // 1. Toggle menu when hamburger is clicked
+        menu.addEventListener('click', function() {
+            menuLinks.classList.toggle('active');
+            menu.classList.toggle('is-active'); 
+        });
+
+        // 2. NEW: Close menu when any link inside it is clicked
+        navItems.forEach(link => {
+            link.addEventListener('click', () => {
+                menuLinks.classList.remove('active');
+                menu.classList.remove('is-active');
+            });
+        });
+    }
 });
 
 /**
