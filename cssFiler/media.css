@@ -7,6 +7,11 @@
 
 
 @media (max-width: 1700px) {
+    .wheel-label {
+        display: none;
+    }
+}
+@media (max-width: 1400px) {
     #project-wheel {
         display: none;
     }
@@ -14,7 +19,6 @@
 
 /* --- MOBILE RULES (The Switch) --- */
 @media (max-width: 1100px) {
-
 
         .hero-text {
         max-width: 90%;
@@ -106,6 +110,19 @@
         /* Show on desktop */
     }
 
+    /**Side projects 1100px**/
+    #sideProjects {
+        padding: 5rem 20px; 
+    }
+    
+    /**Side projects**/
+
+    .sideProjectGrid {
+        column-count: 2;
+        /* Stack side images */
+    }
+
+
     /**ABOUT 1100px **/
         .about-paragraph {
         text-align: justify;
@@ -151,6 +168,10 @@
     .projects-grid {
         grid-template-columns: 1fr !important;
         width: 90%;
+    }
+
+    .project-card {
+        margin-bottom: 1rem;
     }
 
     /* B. HERO & VIDEO ADJUSTMENTS (Your original rules) */
@@ -224,9 +245,8 @@
 
     #project-wheel {
         display: none;
-        /* Hide the vertical side-nav on mobile */
     }
-
+*/
     html {
         font-size: 14px;
         /* Slightly smaller base size for mobile */
