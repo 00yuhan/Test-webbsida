@@ -111,11 +111,6 @@
     }
 
     /**Side projects 1100px**/
-    #sideProjects {
-        padding: 5rem 20px; 
-    }
-    
-    /**Side projects**/
 
     .sideProjectGrid {
         column-count: 2;
@@ -153,8 +148,21 @@
 /* PHONES (The "All-in-One" Mobile Fix) */
 @media (max-width: 768px) {
 
+    #about {
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+    }
+
+    #sideProjects {
+        padding: 4rem 20px; 
+    }
     .project-card {
         border-radius: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .projects-section {
+        padding-top: 4rem;
     }
 
     .project-info {
@@ -172,9 +180,8 @@
 
     .project-image {
     height: 300px;
-}
+    }
     
-
     .footer-logo {
         display: none;
     }
@@ -183,10 +190,6 @@
     .projects-grid {
         grid-template-columns: 1fr !important;
         width: 90%;
-    }
-
-    .project-card {
-        margin-bottom: 1rem;
     }
 
     /* B. HERO & VIDEO ADJUSTMENTS (Your original rules) */
@@ -291,8 +294,7 @@
         width: 90%;
         margin: 0 auto;
         text-align: center;
-        padding: 1rem;
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
         padding-top: 2rem;
         gap: 0rem;
     }
@@ -304,8 +306,7 @@
     .sideProjectGrid img{
         margin-bottom: 10px;
     }
-
-    /* 2. Ensure the image doesn't get squished */
+    
     #aboutbilden {
         width: 100%;
         max-width: 400px;

@@ -24,12 +24,10 @@
 }
 
 .hero-text{
-
-    /* ... your existing position/bottom/left styles ... */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Keeps text aligned left */
-    gap: 1rem; /* Adds a nice gap between the paragraph and the arrow */
+    align-items: flex-start;
+    gap: 1rem;
 
     position: absolute;   
     bottom: 5rem;        
@@ -46,9 +44,6 @@
     transform: translateY(10px);
     animation: heroTextIn 1.6s ease-out forwards;
     animation-delay: 0.5s;
-
-    /*transition: opacity 0.3s ease-out;*/
-    
 }
 
 @keyframes heroTextIn {
