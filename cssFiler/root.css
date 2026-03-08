@@ -10,12 +10,6 @@
     --text-navbar-darker: #81807d;
     --hover-color: #d8d8d8;
     
-    --primary-color: #C68F5A;
-    --secondary-color: #3B5A9A;
-    --color-1: #f5eee6;
-    --color-2: #F3F7F9;
-    --color-3: #F6F3F9;
-
     --header-bg-color: 45, 45, 45; 
     --header-bg-alpha-start: 0;
     --header-bg-alpha-end: 1; /* 0.95 looks better than 1 with blur */
@@ -41,5 +35,7 @@ html {
 }
 
 body {
-    background-color: var(--backgrund-body);
+    background-color: var(--backgrund-body-2);
+    overflow-x: hidden; /* Prevents side-scrolling */
+    width: 100%;
 }

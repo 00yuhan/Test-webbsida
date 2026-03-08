@@ -22,11 +22,12 @@
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
-    width: 1200px;
-    margin: auto;
+    grid-template-columns: 1fr;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 
@@ -144,6 +145,11 @@
     margin: 0 0 0.5rem 0;
     color: var(--base-color);
     font-family: Inter;
+
+    /*
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+    word-break: break-word;
+    line-height: 1.2;*/
 }
 
 .project-info p {
@@ -245,6 +251,7 @@
     align-items: center;
     padding-bottom: 8rem;
     padding-top: 8rem;
+    background-color: var(--backgrund-body);
 }
 
 #aboutTitle {
@@ -261,7 +268,7 @@
     gap: 2rem;
     padding: 2rem;
     border-radius: 1rem;
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     background-color: var(--backgrund-body-2);
 
@@ -378,10 +385,10 @@
     margin: 0 auto;
 }
 
-.sideProjectGrid img:nth-child(1) { transition-delay: .3s; }
-.sideProjectGrid img:nth-child(2) { transition-delay: .2s; }
-.sideProjectGrid img:nth-child(3) { transition-delay: .32s; }
-.sideProjectGrid img:nth-child(4) { transition-delay: .4s; }
+.sideProjectGrid img:nth-child(1) { transition-delay: .5s; }
+.sideProjectGrid img:nth-child(2) { transition-delay: .1s; }
+.sideProjectGrid img:nth-child(3) { transition-delay: .22s; }
+.sideProjectGrid img:nth-child(4) { transition-delay: .3s; }
 .sideProjectGrid img:nth-child(5) { transition-delay: .6s; }
 
 
@@ -393,37 +400,50 @@
 /**POPOUP DIALOG **/
 
 #imageDialog {
-    /* 1. This overrides the browser's default 'absolute' position */
     position: fixed; 
-    
-    /* 2. Standard centering math */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    /* 3. Reset all margins and borders */
+
+    width: 90%;
+    max-width: 600px;
+
     margin: 0; 
     border: none;
     background: transparent;
     padding: 0;
-    
-    /* 4. Ensure it doesn't scroll with the page content */
     overflow: visible; 
     border: none;
     outline: none;
 }
 
-/* This styles the dark area behind the popup */
 #imageDialog::backdrop {
     background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    backdrop-filter: blur(10px);
 }
 
 .dialog-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: auto;
+
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+#imageDialog img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+#dialogTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: justify;
 }
 
 #fullImage {
@@ -460,3 +480,55 @@
 /**Dialog content**/
 
 /**POPOUP DIALOG **/
+
+/**Hamburger meny**/
+/* 1. Desktop: Hide the toggle button */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-navbar);
+    transition: all 0.3s ease;
+}
+
+
+/**Hamburger meny**/
+
+/* 1. Desktop: Hide the toggle button */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-navbar);
+    transition: all 0.3s ease;
+}
+
+
+/**Hamburger meny**/
+
+/* --- Base Navbar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes logo to left, links to right */
+    align-items: center;
+    padding: 0rem 0rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}

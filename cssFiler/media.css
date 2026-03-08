@@ -5,68 +5,216 @@
 }
 
 
-/* We need this Media Query so it doesn't stay 3 columns on a tiny phone! */
-@media (max-width: 1024px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+
+@media (max-width: 1700px){   #project-wheel {
+        display: none;
     }
 }
 
-/* 3. Responsive grid for phones */
-@media (max-width: 900px) {
-    .projects-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 600px) {
-    .projects-grid {
-        grid-template-columns: 1fr; /* 1 column for phones */
-    }
-}
-
-
-
+/* PHONES (The "All-in-One" Mobile Fix) */
 @media (max-width: 768px) {
-    /* 1. Hide the "About" link in the Navbar */
-    header nav ul li:nth-child(4) { 
-        display: none; 
-    }
-    /* Note: If "About" is not the 2nd item, we might need to add a class to it */
-
-    /* 2. Stretch the Hero Text side-to-side */
-    .hero-text {
-        max-width: 90%; /* Instead of 40% */
-        left: 5%;      /* Center it slightly on the screen */
-        bottom: 5rem;  /* Give it some room from the bottom */
-    }
-
-    .hero-text h1 {
-        font-size: 2.2rem; /* Make the title a bit smaller for phones */
-    }
-
-    .hero-text p {
-        font-size: 1.1rem;
-        width: 100%; /* Ensure it uses all available width in the box */
-    }
     
-    /* 3. Fix the "Welcome" section for phones */
-    .welcome {
-        flex-direction: column; /* Stack image on top of text */
-        text-align: center;
-        margin-top: 2rem;
+    /* A. PROJECT GRID FIX: Back to 1 column so they are big */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        width: 90%;
     }
+
+    /* B. HERO & VIDEO ADJUSTMENTS (Your original rules) */
+    .hero-text {
+        max-width: 90%;
+        left: 5%;
+        bottom: 5rem;
+    }
+
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero-text p { font-size: 1.1rem; width: 100%; }
 
     .hero video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-    /* SHIFT VIDEO HERE */
-    object-position: 70% center; 
-
-    filter: blur(.5rem) brightness(0.8);
-    z-index: -1;
+        object-position: 70% center; /* Your specific shift */
+        filter: blur(.5rem) brightness(0.8);
     }
 
+    /* C. THE HAMBURGER MENU (Crucial) */
+    .menu-toggle {
+        display: flex !important; /* Show hamburger */
+        flex-direction: column;
+        gap: 5px;
+        z-index: 10001;
+        cursor: pointer;
+    }
+
+.nav-list {
+        display: none; 
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(20, 20, 20, 0.98); 
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        
+        /* ADD THESE TWO LINES: */
+        padding: 0; 
+        margin: 0;
+        list-style: none;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show when JS toggles it */
+    }
+
+    .nav-list li {
+        text-align: center; /* Ensures text is centered within the item */
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    /* D. SIDE PROJECTS & HIDING SIDEBAR */
+    .sideProjectGrid {
+        column-count: 2; /* Stack side images */
+    }
+
+    #project-wheel {
+        display: none; /* Hide the vertical side-nav on mobile */
+    }
+
+    html {
+        font-size: 14px; /* Slightly smaller base size for mobile */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduced from standard desktop sizes */
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem; /* Keeps body text at a readable 16px */
+        line-height: 1.5; /* Good line height prevents text from feeling crowded */
+    }
+
+    /* 1. Force the About container to stack */
+    #bildtextcontainer {
+        display: flex;
+        flex-direction: column; /* Stacks image on top, text below */
+        align-items: center;    /* Centers everything horizontally */
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* 2. Ensure the image doesn't get squished */
+    #aboutbilden {
+        width: 100%;            /* Image fills the container */
+        max-width: 400px;       /* Optional: keeps it from getting too huge */
+        height: auto;
+        margin-bottom: 2rem;    /* Spacing between image and text */
+    }
+
+    /* 3. Give the text room to breathe */
+    #textBlock {
+        width: 100%;
+        padding: 0;
+    }
+
+    #textblocktitle {
+        text-align: center; /* This pulls it back to the middle */
+        margin-bottom: 1rem; /* Adds a bit of breathing room below the title */
+    }
+
+    .about-paragraph {
+        text-align: justify; /* Optional: centers the body text too for better mobile balance */
+    }
+
+}
+
+
+/**side shoots on project sides**/
+
+/* --- DESKTOP RULES --- */
+/* Hide the bubble and the popup logic on desktop */
+.mobile-info-trigger {
+    display: none;
+}
+
+.mobile-sidebar-popup {
+    background: var(--backgrund-body-2);
+    color: white;
+    border: 1px solid #444;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+}
+/* Your original Sidebar code stays here */
+.introSideBar {
+    position: absolute;
+    left: -15em;
+    width: 18em;
+    margin-top: 20.5rem;
+    display: block; /* Show on desktop */
+}
+
+/* --- MOBILE RULES (The Switch) --- */
+@media (max-width: 1100px) { /* Adjust this number based on when it starts to overlap */
+    
+    /* 1. Hide the desktop sidebar so it doesn't overlap text */
+    .introSideBar, .showcasing-sidebar {
+        display: none;
+    }
+
+/* Keep the bubble left style */
+
+    .mobile-info-trigger.left {
+        display: flex;
+        position: absolute;
+        left: 0px;
+        top: 0;
+    }
+
+    /* Add the bubble right style */
+    .mobile-info-trigger.right {
+        display: flex;
+        position: absolute;
+        right: 0px;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background: var(--secondary-color); /* Maybe a different color for team? */
+        color: white;
+        border-radius: 50%;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 99;
+    }
+
+    /* 3. Style the Popup to be mobile-friendly */
+    .mobile-sidebar-popup {
+        width: 90%;
+        border: none;
+        border-radius: 1rem;
+        padding: 2rem;
+        background: var(--backgrund-body-2);
+        color: white;
+        font-family: 'Inter', sans-serif; /* Or whatever your main font is */
+        line-height: 1.6;
+        color: var(--base-color); /* Ensure the text color matches */
+    }
+    
+    dialog img {
+        border-radius: 0.25rem; /* Much sharper corners for mobile */
+    }
+}
+
+.mobile-info-trigger.left, 
+.mobile-info-trigger.right {
+    top: 10rem; /* Increase this number to move the bubbles further down */
+    /* If you want them even lower, try 10rem or 15rem */
 }
