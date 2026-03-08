@@ -143,6 +143,10 @@
 /* PHONES (The "All-in-One" Mobile Fix) */
 @media (max-width: 768px) {
 
+    .footer-logo {
+        display: none;
+    }
+
     /* A. PROJECT GRID FIX: Back to 1 column so they are big */
     .projects-grid {
         grid-template-columns: 1fr !important;
