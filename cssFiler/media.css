@@ -125,7 +125,6 @@
 
     /**ABOUT 1100px **/
         .about-paragraph {
-        text-align: justify;
         font-size: 1rem;
         line-height: 1.3;
     }
@@ -159,6 +158,28 @@
 
 /* PHONES (The "All-in-One" Mobile Fix) */
 @media (max-width: 768px) {
+
+    .project-card {
+        border-radius: .5rem;
+    }
+
+    .project-info {
+        padding: .8rem .8rem;
+    }
+
+    .project-info p {
+        font-size: .8rem;
+    }
+
+    .project-info h3 {
+    font-size: 1rem;
+    margin: 0 0 0.2rem 0;
+    }
+
+    .project-image {
+    height: 300px;
+}
+    
 
     .footer-logo {
         display: none;

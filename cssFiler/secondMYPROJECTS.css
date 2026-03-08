@@ -111,9 +111,7 @@
     backdrop-filter: blur(5px) saturate(150%);
     -webkit-backdrop-filter: blur(5px) saturate(150%);
 
-
     background: rgba(15, 15, 15, 0.7);
-
 
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
@@ -145,11 +143,6 @@
     margin: 0 0 0.5rem 0;
     color: var(--base-color);
     font-family: Inter;
-
-    /*
-    font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
-    word-break: break-word;
-    line-height: 1.2;*/
 }
 
 .project-info p {
