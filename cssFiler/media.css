@@ -330,6 +330,10 @@
         line-height: 1.2;
     }
 
+    .cv-button {
+        font-size: .8rem;
+    }
+
     .button-container{
         gap: .5rem;
     }
