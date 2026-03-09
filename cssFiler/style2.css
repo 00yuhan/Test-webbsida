@@ -58,14 +58,12 @@
     transform: translateY(0);
 }
 
-/* Heading */
 .hero-text h1 {
     font-family: 'Inter', sans-serif;
     font-size: 3rem;         /* adjust size */
     margin: 0;
 }
 
-/* Paragraph */
 .hero-text p {
     font-family: 'Public Sans', sans-serif;
     font-size: 1.2rem;
@@ -78,8 +76,6 @@
   height: 1px;
 }
 
-
-/* SHARED ARROW BASE */
 .scroll-indicator {
     display: flex;
     flex-direction: column;
@@ -115,13 +111,11 @@
     /*60% {transform: translateY(-5px) rotate(45deg);}*/
 }
 
-/* Target the arrow inside the "scroll-up" container */
 .scroll-up .arrow {
-    transform: rotate(-135deg); /* Flips the 45deg arrow to point up */
+    transform: rotate(-135deg);
     margin-bottom: 10px;
 }
 
-/* Update the bounce animation for up-pointing arrows */
 @keyframes bounceUp {
     0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(-135deg); }
     40% { transform: translateY(10px) rotate(-135deg); }
@@ -145,14 +139,13 @@
 .aboutMe {
     height: 100vh;
     display: flex;
-    flex-direction: row;         /* default: image + text side by side */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;             /* allow wrapping if space is tight */
+    flex-wrap: wrap;
     gap: 2rem;
-
     margin: auto;
-    padding: 1rem;               /* optional: prevent clipping at edges */
+    padding: 1rem; 
 }
 
 .about-content {

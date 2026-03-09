@@ -24,9 +24,16 @@
 <body>
 
     <header id="site-header">
-        <nav>
-            <ul>
-                <li><a href="index.html" class="logo-link">YU-HAN HUA</a></li>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">YU-HAN HUA</a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-list">
                 <li><a href="index.html#projects">PROJECTS</a></li>
                 <li><a href="index.html#sideProjects">SIDES</a></li>
                 <li><a href="index.html#about">ABOUT</a></li>
@@ -43,8 +50,6 @@
 
 
     <main class="introContainer">
-
-        <button class="mobile-info-trigger left" onclick="openSidebar('context-popup')">?</button>
 
         <aside class="introSideBar">
             <span class="contextLabel">CONTEXT</span>
@@ -64,10 +69,6 @@
                 rail-dependent systems that limit vehicle compatibility, or invasive hardware requiring permanent
                 drilling. These constraints make rapid deployment in extreme environments nearly impossible.</p>
         </aside>
-
-        <button class="mobile-info-trigger right" onclick="openSidebar('team-popup')">
-            i
-        </button>
 
         <aside class="showcasing-sidebar">
             <span class="contextLabel">THE TEAM</span>
@@ -101,11 +102,24 @@
 
             <div class="researchIdeation">
                 <h3>OVERVIEW OF RESULT</h3>
-                <img id="descriptionImg" src="bilder/satcube/detail bild 3.webp" alt="Exploded view of adapter"
-                    class="fullWidthImage">
+
+                <div class="image-interactive-wrapper">
+                    <button class="mobile-info-trigger left" onclick="openSidebar('context-popup')">
+                        ?
+                    </button>
+
+                    <img id="descriptionImg" src="bilder/satcube/detail bild 3.webp" alt="names of parts on the product"
+                        class="fullWidthImage">
+
+
+                    <button class="mobile-info-trigger right" onclick="openSidebar('team-popup')">
+                        Team
+                    </button>
+                </div>
+
                 <h3>INSTALLATION PROCEDURE</h3>
                 <img id="manual" src="bilder/satcube/ritningar hur man installerar adaptern.png"
-                    alt="Exploded view of adapter" class="fullWidthImage">
+                    alt="Exploded view of adapter">
 
                 <div class="gradient-section">
                     <br>
@@ -139,16 +153,13 @@
                     <img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/prototyptestande.webp"
                         alt="Exploded view of adapter" class="fullWidthImage2">
 
-                    <button class="mobile-info-trigger" id="mockup-btn" onclick="openSidebar('mockup-popup')">
-                        M
-                    </button>
-
                     <aside class="Evaluate-sidebar">
                         <span class="contextLabel">MOCKUP</span>
                         <div class="gridMockup">
-                            <div class="grid-item2"><img
-                                    src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup building.webp"
-                                    onclick="openImage(this)" alt=""></div>
+                            <div class="grid-item2">
+                                <img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup building.webp"
+                                    onclick="openImage(this)" alt="">
+                            </div>
                             <div class="grid-item2"><img
                                     src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup builign 2.webp"
                                     onclick="openImage(this)" alt=""></div>
@@ -164,12 +175,21 @@
                         theft-proof. Nonetheless, rough prototypes were developed and prepared for testing.<br><br>
                     </p>
 
-                    <div class="gridEval">
-                        <img id="lyftaupp"
-                            src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/evaluating.webp"
-                            alt="Exploded view of adapter" class="fullWidthImage2">
-                        <img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/evaluating 2.webp"
-                            alt="Exploded view of adapter" class="fullWidthImage2">
+                    <div class="image-interactive-wrapper">
+                        <div class="gridEval">
+
+
+
+                            <button class="mobile-info-trigger M" id="mockup-btn" onclick="openSidebar('mockup-popup')">
+                                
+                            </button>
+
+                            <img id="lyftaupp"
+                                src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/evaluating.webp"
+                                alt="Exploded view of adapter" class="fullWidthImage2">
+                            <img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/evaluating 2.webp"
+                                alt="Exploded view of adapter" class="fullWidthImage2">
+                        </div>
                     </div>
 
                     <p>
@@ -204,7 +224,7 @@
                         <br><br>The installation process is designed in three logical steps:
                     </p>
 
-                    <ul>
+                    <ul id="listaText">
                         <li><strong>Preparation:</strong> The user mounts the magnets onto the main chassis.</li>
                         <li><strong>Aligment:</strong> The frame is positioned on the car roof; the frame itself acts as
                             a
@@ -212,6 +232,11 @@
                         <li><strong>Engagement:</strong> The mobility terminal is slid onto the frame and secured with
                             integrated locking clamps.</li>
                     </ul>
+
+                    <div class="scroll-container">
+                        <img id="manual2" src="bilder/satcube/ritningar hur man installerar adaptern.png" alt="Manual">
+                    </div>
+
                     <br>
                     <p>
                         While the frame is relatively large, its size is a necessary trade-off to ensure proper
@@ -264,8 +289,8 @@
     </footer>
 
     <dialog id="context-popup" class="mobile-sidebar-popup">
-    <div class="popup-inner">
-        <span class="contextLabel">CONTEXT</span>
+        <div class="popup-inner">
+            <span class="contextLabel">CONTEXT</span>
             <div class="introGrid">
                 <div class="grid-item2"><img src="bilder/satcube/mounting systems/utzoomad hook.webp"
                         onclick="openImage(this)" alt=""></div>
@@ -276,31 +301,36 @@
                 <div class="grid-item2"><img src="bilder/satcube/mounting systems/bolt zoom in.webp"
                         onclick="openImage(this)" alt=""></div>
             </div>
-        <p class="textSidebar">Current market solutions typically fall into two restrictive categories:
+            <p class="textSidebar">Current market solutions typically fall into two restrictive categories:
                 rail-dependent systems that limit vehicle compatibility, or invasive hardware requiring permanent
                 drilling. These constraints make rapid deployment in extreme environments nearly impossible</p>
-    </div>
+        </div>
     </dialog>
 
     <dialog id="team-popup" class="mobile-sidebar-popup">
-    <div class="popup-inner">
-        <span class="contextLabel">THE TEAM</span>
-        <div class="grid-item">
-            <img src="bilder/satcube/showcasing.webp" alt=""></div>
-        <p class="disclaimer2">Jonna Stenlund, Edith Pålsson,<br>Yu-Han Hua, Ida Osterman</p>
-        <p class="textSidebar">Final presentation at Satcube HQ.</p>
-    </div>
+        <div class="popup-inner">
+            <span class="contextLabel">THE TEAM</span>
+            <div class="grid-item">
+                <img src="bilder/satcube/showcasing.webp" alt="">
+            </div>
+            <p class="disclaimer2">Jonna Stenlund, Edith Pålsson,<br>Yu-Han Hua, Ida Osterman</p>
+            <p class="textSidebar">Final presentation at Satcube HQ.</p>
+        </div>
     </dialog>
 
     <dialog id="mockup-popup" class="mobile-sidebar-popup">
-    <div class="popup-inner">
-        <span class="contextLabel">MOCKUP</span>
-        <div class="gridMockup">
-            <div class="grid-item2"><img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup building.webp" onclick="openImage(this)"></div>
-            <div class="grid-item2"><img src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup builign 2.webp" onclick="openImage(this)"></div>
+        <div class="popup-inner">
+            <span class="contextLabel">MOCKUP</span>
+            <div class="gridMockup">
+                <div class="grid-item2"><img
+                        src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup building.webp"
+                        onclick="openImage(this)"></div>
+                <div class="grid-item2"><img
+                        src="bilder/satcube/GENERATING, TESTING, ITERATING, EVALUATING/mockup builign 2.webp"
+                        onclick="openImage(this)"></div>
+            </div>
+            <p class="textSidebar">The mockup contains 20 kg sand to simulate the weight of Motion (the terminal).</p>
         </div>
-        <p class="textSidebar">The mockup contains 20 kg sand to simulate the weight of Motion (the terminal).</p>
-    </div>
     </dialog>
 
     <dialog id="imageDialog" onclick="if(event.target==this) this.close()">
@@ -309,8 +339,8 @@
         </div>
     </dialog>
     <script src="popup.js"></script>
+    <script src="navbar.js"></script>
 
 </body>
 
 </html>
-

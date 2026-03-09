@@ -35,7 +35,7 @@ header {
     position: relative;      /* Allows the sidebar to anchor to this container */
     max-width: 1200px;       /* This defines your "Centerline" width */
     margin: 0 auto;          /* Centers the main container */
-    padding: 2rem;
+    padding: 20px;
     color: var(--base-color);
     font-family: Inter;
     line-height: 1.6;
@@ -49,12 +49,10 @@ header {
     margin-top: 20.5rem;
 }
 
-
-
 .introTextContent {
-    width: 100%;              /* Fills the 1200px container */
-    max-width: 1000px;        /* Keeping text at a readable width */
-    margin: 0 auto;          /* Centers the text inside the 1200px container */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .introContentWrapper{
@@ -64,6 +62,18 @@ header {
     gap: 2rem;
     align-items: flex-start;
     margin-bottom: 1rem;
+}
+
+.boxRole{
+    flex: 1;
+}
+
+.boxRole ul {
+    list-style-type: none;
+}
+
+.boxProblem{
+    flex:2
 }
 
 .researchIdeation > img {
@@ -80,23 +90,25 @@ header {
     border-radius: 1rem;
 }
 
-.boxRole{
-    flex: 1;
-}
-
-.boxRole ul {
-    list-style-type: none;
-}
-
-.boxProblem{
-    flex:2
-}
-
 #manual {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
+
+#manual2 {
+    padding: 1rem 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#manual2 {
+    height: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .researchIdeation h3{
     padding-top: 2rem;
     padding-bottom: 1rem;
