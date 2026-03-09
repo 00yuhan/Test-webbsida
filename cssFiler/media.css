@@ -86,6 +86,42 @@
 /* PHONES (The "All-in-One" Mobile Fix) */
 @media (max-width: 768px) {
 
+    .fullWidthImage, .fullWidthImage2, #descriptionImg {
+        display: block;
+        width: 100%;
+        height: 200px;
+        border-radius: .3rem;
+    }
+
+       #lyftaupp, #lyftaupp2 {
+        border-radius: .3rem;
+    }
+
+    .researchIdeation #descriptionImg {
+        height: 250px;
+    }
+
+        .researchIdeation #manual {
+        display: block;
+        width: 100%;
+        height: 250px;
+        border-radius: .3rem;
+    }
+
+    .gradient-section #ringlight, #magnetic, #friction, #buttons, #twist, #prototypes {
+        display: block;
+        width: 100%;
+        height: 250px;
+        border-radius: .3rem;
+    }
+
+    .gridEval .fullWidthImage {
+        display: block;
+        width: 100%;
+        height: 200px;
+        border-radius: .3rem;
+    }
+
     #about {
     padding-top: 4rem;
     padding-bottom: 7rem;
@@ -107,7 +143,7 @@
         padding: .8rem .8rem;
     }
 
-    .project-info p {
+    .project-info p, .itemsList {
         font-size: .8rem;
     }
 
@@ -278,14 +314,19 @@
     /**DIALOG**/
 
     dialog img {
-        border-radius: 0.25rem;
+        border-radius: .5rem;
         /* Much sharper corners for mobile */
     }
+
 
     #dialogTitle {
         font-size: .85rem;
         margin-bottom: 1rem;
         text-align: justify;
+    }
+
+    #challange-text {
+    text-align: justify;
     }
 
     /**DIALOG**/
@@ -300,14 +341,12 @@
     /* 1. Hide the desktop sidebars */
     .introSideBar, 
     .showcasing-sidebar, 
-    .Evaluate-sidebar {
+    .Evaluate-sidebar,
+    .VideoSidebar,
+    .SidebarTemplates,
+    .SidebarSlots,
+    .showcasing-sidebar2 {
         display: none;
-    }
-
-    .fullWidthImage {
-        display: block;
-        width: 100%;
-        height: auto;
     }
 
     /* 2. Anchor the container */
@@ -372,9 +411,9 @@
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
     }
     50% {
-        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0);
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0);
     }
-    70% {
+    100% {
         box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
     }
     }
@@ -422,11 +461,6 @@
 
     /**Intro roles o challange text**/
 
-    #descriptionImg {
-    height: 100%;
-    object-fit: cover;
-    }
-
     #finalprototyp {
     height: 100%;
     object-fit: cover;
@@ -447,6 +481,7 @@
 
     #listaText {
         padding-left: 1rem;
+        font-size: .8rem;
     }
 
     .scroll-container {
@@ -464,4 +499,39 @@
         max-width: none;       /* This prevents the browser from forcing it to shrink */
         height: 250px;         /* Set a fixed height that fits your layout */
     }
+
+
+
+    /**project polarization**/
+
+    .introGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem; 
+        width: auto;
+    }
+
+    .introGrid img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    .textSidebar {
+        font-size: .8rem;
+        margin-bottom: .5rem;
+        text-align: justify;
+        line-height: 1.2rem;
+        margin-top: .5rem;
+    }
+
+    .demoVideo {
+    border-radius: .5rem;
+    }
+
+    .grid-item .the-tool-border {
+        border-radius: .5rem;
+    }
+
 }
