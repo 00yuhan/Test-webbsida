@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="cssFiler/footer.css">
     <link rel="stylesheet" href="cssFiler/header.css">
     <link rel="stylesheet" href="cssFiler/root.css">
-    <link rel="stylesheet" href="cssFiler/ElectricMiniMotorcyle.css">
+    /**Insert link here**/
     <link rel="stylesheet" href="cssFiler/media.css">
 
     <!--Fonts-->
@@ -110,29 +110,15 @@
 
             <div class="researchIdeation">
                 <h3>THE RESULT</h3>
-
+                
 
 
                 <div class="image-interactive-wrapper">
                     <button class="mobile-info-trigger left"
-                        onclick="document.getElementById('context-oldproject').showModal()">
-                        <!--Button text-->
-                    </button>
-                    <img id="resultImg" src="bilder/Electric Mini Motorcycle/resultImg.webp" alt=""
-                        class="fullWidthImage">
-                    <button class="mobile-info-trigger left two"
-                        onclick="document.getElementById('driving-vid').showModal()">
-                        <!--Button text-->
-
-                    </button>
-                    <button class="mobile-info-trigger left three"
-                        onclick="document.getElementById('showcase-vid').showModal()">
+                        onclick="document.getElementById('/**NAME CONNECTION TO DIALOG HERE**/').showModal()">
                         <!--Button text-->
                     </button>
                 </div>
-
-
-
 
 
                 <div class="gradient-section">
@@ -214,44 +200,15 @@
     </footer>
 
     <dialog id="context-oldproject" class="mobile-sidebar-popup">
-        <span class="contextLabel">CONTEXT</span>
-
-        <div class="introGrid">
-            <div class="grid-item"><img src="bilder/Electric Mini Motorcycle/gamalElMini.webp" onclick="openImage(this)"
-                    alt=""></div>
-            <div class="grid-item"><img src="bilder/Electric Mini Motorcycle/gamalElMiniVerklig.webp"
-                    onclick="openImage(this)" alt=""></div>
-        </div>
-        <p id="disclaimer-content">*here is their <a id="titleLink2" href="https://hdl.handle.net/20.500.12380/218725"
-                target="_blank">work</a>.</p>
-
-        <p class="textSidebar">Seven years earlier, in 2015, the first iteration was built. The initial goals were
-            the same: to showcase in the annual <a id="titleLinkke2" href="https://www.cortegen.se/"
-                target="_blank">Cortège</a> that Chalmers isn't just about books and numbers, but also
-            about hands-on building and design. This time, however, the minimoto would be fully steerable and a bit
-            flashier to catch the eyes of future Chalmersists ;).
-        </p>
+        
     </dialog>
-
-    <dialog id="driving-vid" class="mobile-sidebar-popup">
-        <span class="contextLabel"></span>
-        <p class="textSidebar"></p>
-        <div class="gridMockup">
-            <video class="SidebarVideo" autoplay muted loop playsinline preload="metadata" controls>
-                <source src="bilder/Electric Mini Motorcycle/AkerMinimoto.mp4" type="video/mp4">
-            </video>
-        </div>
+        <dialog id="driving-vid" class="mobile-sidebar-popup">
+        
     </dialog>
 
 
     <dialog id="showcase-vid" class="mobile-sidebar-popup">
-        <span class="contextLabel"></span>
-        <p class="textSidebar"></p>
-        <div class="gridMockup">
-            <video class="SidebarVideo2" autoplay muted loop playsinline preload="metadata" controls>
-                <source src="bilder/Electric Mini Motorcycle/Showcasing minimoto.mp4" type="video/mp4">
-            </video>
-        </div>
+
     </dialog>
 
     <dialog id="imageDialog" onclick="if(event.target==this) this.close()">

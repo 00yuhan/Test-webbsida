@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElectricMiniMotorcyle</title>
 
+    <link rel="stylesheet" href="cssFiler/footer.css">
+    <link rel="stylesheet" href="cssFiler/header.css">
     <link rel="stylesheet" href="cssFiler/root.css">
     <link rel="stylesheet" href="cssFiler/UAM.css">
-    <link rel="stylesheet" href="cssFiler/footer.css">
+    <link rel="stylesheet" href="cssFiler/media.css">
 
     <!--Fonts-->
     <link
@@ -20,10 +22,18 @@
 <body>
 
     <header id="site-header">
-        <nav>
-            <ul>
-                <li><a href="index.html" class="logo-link">YU-HAN HUA</a></li>
+        <nav class="navbar">
+            <a href="index.html" class="logo-link">YU-HAN HUA</a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-list">
                 <li><a href="index.html#projects">PROJECTS</a></li>
+                <li><a href="index.html#sideProjects">SIDES</a></li>
                 <li><a href="index.html#about">ABOUT</a></li>
             </ul>
         </nav>
@@ -31,7 +41,7 @@
 
     <!--END OF NAVBAR-->
     <section id="frontImage">
-        <img src="bilder/UAM/UAMHEADERAI.webp">
+        <img id="frontimageUAM" src="bilder/UAM/UAMHEADERAI.webp">
         <div class="heropageInfo">
         </div>
     </section>
@@ -45,9 +55,7 @@
                 <div class="grid-item"><img id="besokaside" src="bilder/UAM/besok.webp" onclick="openImage(this)"
                         alt=""></div>
             </div>
-            <p class="textSidebar"> Visiting an air medical base provided the opportunity to interview personnel
-                operating emergency helicopters, the closest existing relative to Urban Air Mobility in terms of mission
-                profile and operational use.
+            <p class="textSidebar"> Visiting an air medical base to interview personnel operating emergency helicopters.
             </p>
         </aside>
 
@@ -56,8 +64,8 @@
             <div class="introGrid2">
                 <div class="grid-item"><img src="bilder/UAM/EVS38.webp" onclick="openImage(this)" alt=""></div>
             </div>
-            <p class="textSidebar">Showcasing the UAM at <a id="EV38Link" href="https://evs38.org/"
-                    target="_blank">EV38</a> alongside David Gustafsson, Linnea Westberg, and Matilda Neveilus Wernholm.
+            <p class="textSidebar">Showcasing at <a id="EV38Link" href="https://evs38.org/" target="_blank">EV38</a>
+                alongside David Gustafsson, Linnea Westberg, and Matilda Neveilus Wernholm.
             </p>
 
 
@@ -85,14 +93,20 @@
             </div>
 
             <div class="researchIdeation">
-                <br>
-                <h2>RESULT</h2>
-                <br>
-                <img id="resultImg" src="bilder/UAM/UAMHeader.webp" alt="" class="fullWidthImage">
 
+                <h2>RESULT</h2>
+
+                <div class="image-interactive-wrapper">
+                    <button class="mobile-info-trigger left" onclick="document.getElementById('visit').showModal()">
+                        <!--Button text-->
+                    </button>
+                    <img id="resultImg" src="bilder/UAM/UAMHeader.webp" alt="" class="fullWidthImage">
+                    <button class="mobile-info-trigger right" onclick="document.getElementById('ev38').showModal()">
+                        <!--Button text-->
+                    </button>
+                </div>
 
                 <div class="gradient-section">
-                    <br>
                     <h1>Design Process</h1>
 
                     <h3>MOODBOARD</h3>
@@ -100,7 +114,7 @@
                     <img id="moodboard" src="bilder/UAM/moodboard.webp" alt="" class="fullWidthImage">
 
                     <h3>SKETCHES</h3>
-                    <img src="bilder/UAM/sketches.webp" alt="" class="fullWidthImage">
+                    <img id="sketches" src="bilder/UAM/sketches.webp" alt="" class="fullWidthImage">
 
                     <h3>INITIAL QUICK 3D-MODELS</h3>
                     <img id="cadmodel" class="paddingUnderImage" src="bilder/UAM/1iterationBlender.webp" alt="">
@@ -127,15 +141,24 @@
                     <aside class="SidebarSlot">
                         <span class="contextLabel">HEIGHT OF STEPS </span>
                         <div class="gridMockup">
-                            <div class="grid-item"><img src="bilder/UAM/stepTest.webp" onclick="openImage(this)"
-                                    alt="">
+                            <div class="grid-item"><img src="bilder/UAM/stepTest.webp" onclick="openImage(this)" alt="">
                             </div>
                         </div>
                     </aside>
 
                     <h3>1:1 MOCKUP</h3>
 
-                    <img id="mockup4" src="bilder/UAM/11mockup.webp" alt="" class="fullWidthImag">
+                   
+
+                <div class="image-interactive-wrapper">
+                    <button class="mobile-info-trigger left" onclick="document.getElementById('nose-test').showModal()">
+                        <!--Button text-->
+                    </button>
+                     <img id="mockup4" src="bilder/UAM/11mockup.webp" alt="" class="fullWidthImag">
+                    <button class="mobile-info-trigger left two" onclick="document.getElementById('step-test').showModal()">
+                        <!--Button text-->
+                    </button>
+                </div>
 
 
                     <h3>RENDERINGS</h3>
@@ -148,7 +171,6 @@
 
                     <img id="UAMnatt" src="bilder/UAM/nightTime.webp" alt="" class="fullWidthImage, paddingUnderImage">
 
-                    <br>
                     <p class="mainText"> As with most projects, time proved to be a limiting factor. The project's
                         direction
                         and objectives evolved as it progressed, which added complexity. What began as
@@ -217,12 +239,48 @@
         </div>
     </footer>
 
+    <dialog id="visit" class="mobile-sidebar-popup">
+        <span class="contextLabel">VISIT</span>
+        <div class="introGrid2">
+            <div class="grid-item"><img src="bilder/UAM/besok.webp" onclick="openImage(this)" alt="">
+            </div>
+        </div>
+        <p class="textSidebar"> Visiting an air medical base to interview personnel operating emergency helicopters.
+        </p>
+    </dialog>
+
+    <dialog id="ev38" class="mobile-sidebar-popup">
+        <span class="contextLabel">THE TEAM</span>
+        <div class="introGrid2">
+            <div class="grid-item"><img src="bilder/UAM/EVS38.webp" onclick="openImage(this)" alt=""></div>
+        </div>
+        <p class="textSidebar">Showcasing at <a id="EV38Link2" href="https://evs38.org/" target="_blank">EV38</a>
+            alongside David Gustafsson, Linnea Westberg, and Matilda Neveilus Wernholm.
+        </p>
+    </dialog>
+
+    <dialog id="nose-test" class="mobile-sidebar-popup">
+        <span class="contextLabel">NOSE SHAPE TESTING </span>
+        <div class="gridMockup">
+            <div class="grid-item"><img src="bilder/UAM/mockupNoseTesting.webp" onclick="openImage(this)" alt=""></div>
+        </div>
+    </dialog>
+
+    <dialog id="step-test" class="mobile-sidebar-popup">
+        <span class="contextLabel">HEIGHT OF STEPS </span>
+        <div class="gridMockup">
+            <div class="grid-item"><img src="bilder/UAM/stepTest.webp" onclick="openImage(this)" alt="">
+            </div>
+        </div>
+    </dialog>
+
     <dialog id="imageDialog" onclick="if(event.target==this) this.close()">
         <div class="dialog-content">
             <img id="fullImage" src="/bilder/" alt="Full view">
         </div>
     </dialog>
     <script src="popup.js"></script>
+    <script src="navbar.js"></script>
 </body>
 
 </html>
