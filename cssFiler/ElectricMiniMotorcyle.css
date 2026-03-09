@@ -171,7 +171,7 @@ nav li:first-child{
     height: 80%;
     object-fit: cover;
     object-position: 50% 60%;
-    border-radius: .5rem;
+    border-radius: 1rem;
 }
 
 .boxRole{
@@ -224,6 +224,13 @@ nav li:first-child{
 }
 
 #disclaimer {
+    font-size: .8rem;
+    margin-top: .5rem;
+    font-style: italic;
+    opacity: .4;
+    /* Your specific styles here */
+}
+#disclaimer-content {
     font-size: .8rem;
     margin-top: .5rem;
     font-style: italic;
@@ -376,14 +383,14 @@ dialog img {
 
 /**DIALOG DIALOG POPUP**/
 
-.gridEval {
+.gridEval-minimoto {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     margin-bottom: .5rem;
 }
 
-.gridEval img{
+.gridEval-minimoto img{
     height: 180px;
     width: 100%;
     object-fit: cover;
@@ -421,8 +428,15 @@ dialog img {
 #titleLink {
     color: var(--base-color);
 }
+#titleLink2 {
+    color: var(--base-color);
+}
 
 #titleLinkke {
+    color: var(--base-color);
+}
+
+#titleLinkke2 {
     color: var(--base-color);
 }
 
@@ -432,6 +446,7 @@ dialog img {
 
 #buildingTheMinimoto {
     height: 20rem;
+    margin-bottom: 1rem;
 }
 
 .VideoSidebar {

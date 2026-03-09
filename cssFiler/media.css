@@ -104,8 +104,23 @@
         .researchIdeation #manual {
         display: block;
         width: 100%;
+        height: auto;
+        border-radius: .3rem;
+    }
+
+    #polar-uppdelad {
+        display: block;
+        width: 100%;
         height: 250px;
         border-radius: .3rem;
+        margin-bottom: 1rem;
+    }
+
+    #manual2 {
+        display: block;
+        width: auto;           /* Do NOT use 100% here */
+        max-width: none;       /* This prevents the browser from forcing it to shrink */
+        height: 250px;         /* Set a fixed height that fits your layout */
     }
 
     .gradient-section #ringlight, #magnetic, #friction, #buttons, #twist, #prototypes {
@@ -329,11 +344,33 @@
     text-align: justify;
     }
 
+    #cadmodel{
+        height: 15rem;
+    }
+
+    #buildingTheMinimoto {
+        height: 15rem;
+    }
     /**DIALOG**/
 
 }
+@media (max-width: 1043px) {
+    .gridEval-minimoto {
+        display: grid;
+        /* Change to a single column for stacking */
+        grid-template-columns: 1fr; 
+        gap: 1.5rem; /* Slightly larger gap looks better when stacked */
+        margin-bottom: 0.5rem;
+    }
 
-
+    .gridEval-minimoto img {
+        /* Remove fixed height so they aren't squashed */
+        height: auto; 
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem; /* Slightly rounder corners for a modern mobile look */
+    }
+}
 /**SATCUBE MEDIA QUERIES 1100px**/
 /**SATCUBE MEDIA QUERIES 1800px**/
 
@@ -345,10 +382,18 @@
     .VideoSidebar,
     .SidebarTemplates,
     .SidebarSlots,
-    .showcasing-sidebar2 {
+    .SidebarSlot,
+    .showcasing-sidebar2,
+    .VideoSidebar2,
+    .introSideBar2,
+    #moodboardtitel
+    {
         display: none;
     }
 
+    .introContainer{
+        padding: 1rem 20px
+    }
     /* 2. Anchor the container */
     .image-interactive-wrapper {
         position: relative;
@@ -386,6 +431,20 @@
 
     .mobile-info-trigger.right {
         right: -15px;
+        width: 45px; 
+        height: 45px;
+    }
+
+    .mobile-info-trigger.left.two {
+        left: -15px;
+        margin-top: 50px;
+        width: 45px; 
+        height: 45px;
+    }
+
+        .mobile-info-trigger.left.three {
+        right: -15px;
+        margin-top: 100px;
         width: 45px; 
         height: 45px;
     }
@@ -534,4 +593,39 @@
         border-radius: .5rem;
     }
 
+    .SidebarVideo {
+    border-radius: .5rem;
+    }
+
+    .SidebarVideo2 {
+    border-radius: .5rem;
+    }
+
+    #moodboard,
+    #sketches,
+    #cadmodel,
+    #cadmodel2,
+    #resultImg,
+    #cadmodelAI,
+    #mockup1,
+    #mockup2,
+    #stormockup,
+    #mockup4,
+    #UAMdfram,
+    #UAMFotsteg,
+    #UAMnatt
+     {
+        height: auto;
+        border-radius: .3rem;
+    }
+
+    #frontImage img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    #resultImg {
+    height: 100%;
+    object-fit: cover;
+    }
 }

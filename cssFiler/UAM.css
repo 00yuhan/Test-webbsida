@@ -474,17 +474,21 @@ dialog img {
     position: absolute;      /* Take it out of the normal flow */
     right: -15em;             /* Push it to the left, outside the container */
     width: 18em;
-    margin-top: 19rem;
+    margin-top: 15rem;
 }
 
 .introSideBar {
     position: absolute;      /* Take it out of the normal flow */
     left: -15em;             /* Push it to the left, outside the container */
     width: 18em;
-    margin-top: 19rem;
+    margin-top: 15rem;
 }
 
 #EV38Link {
+    color: var(--base-color);
+}
+
+#EV38Link2 {
     color: var(--base-color);
 }
 
