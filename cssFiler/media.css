@@ -17,7 +17,6 @@
     }
 }
 
-/* --- MOBILE RULES (The Switch) --- */
 @media (max-width: 1100px) {
 
         .hero-text {
@@ -35,22 +34,18 @@
         display: none;
     }
 
-
-    /* Your original Sidebar code stays here */
     .introSideBar {
         position: absolute;
         left: -15em;
         width: 18em;
         margin-top: 20.5rem;
         display: block;
-        /* Show on desktop */
     }
 
     /**Side projects 1100px**/
 
     .sideProjectGrid {
         column-count: 2;
-        /* Stack side images */
     }
 
 
@@ -83,7 +78,6 @@
 
 
 /** START 768 768 768 768 768 768 768 START**/
-/* PHONES (The "All-in-One" Mobile Fix) */
 @media (max-width: 768px) {
 
     .fullWidthImage, .fullWidthImage2, #descriptionImg {
@@ -118,9 +112,9 @@
 
     #manual2 {
         display: block;
-        width: auto;           /* Do NOT use 100% here */
-        max-width: none;       /* This prevents the browser from forcing it to shrink */
-        height: 250px;         /* Set a fixed height that fits your layout */
+        width: auto;
+        max-width: none;
+        height: 250px;
     }
 
     .gradient-section #ringlight, #magnetic, #friction, #buttons, #twist, #prototypes {
@@ -175,13 +169,11 @@
         display: none;
     }
 
-    /* A. PROJECT GRID FIX: Back to 1 column so they are big */
     .projects-grid {
         grid-template-columns: 1fr !important;
         width: 90%;
     }
 
-    /* B. HERO & VIDEO ADJUSTMENTS (Your original rules) */
     .hero-text {
         max-width: 90%;
         left: 5%;
@@ -199,14 +191,11 @@
 
     .hero video {
         object-position: 70% center;
-        /* Your specific shift */
         filter: blur(.5rem) brightness(0.8);
     }
 
-    /* C. THE HAMBURGER MENU (Crucial) */
     .menu-toggle {
         display: flex !important;
-        /* Show hamburger */
         flex-direction: column;
         gap: 5px;
         z-index: 10001;
@@ -226,7 +215,6 @@
         align-items: center;
         z-index: 10000;
 
-        /* ADD THESE TWO LINES: */
         padding: 0;
         margin: 0;
         list-style: none;
@@ -234,20 +222,16 @@
 
     .nav-list.active {
         display: flex;
-        /* Show when JS toggles it */
     }
 
     .nav-list li {
         text-align: center;
-        /* Ensures text is centered within the item */
         width: 100%;
         margin: 1.5rem 0;
     }
 
-    /* D. SIDE PROJECTS & HIDING SIDEBAR */
     .sideProjectGrid {
         column-count: 2;
-        /* Stack side images */
     }
 
     #project-wheel {
@@ -256,12 +240,10 @@
 */
     html {
         font-size: 14px;
-        /* Slightly smaller base size for mobile */
     }
 
     h1 {
         font-size: 2rem;
-        /* Reduced from standard desktop sizes */
     }
 
     h2 {
@@ -277,7 +259,6 @@
         line-height: 1rem;
     }
 
-    /* 1. Force the About container to stack */
     #bildtextcontainer {
         display: flex;
         flex-direction: column;
@@ -305,7 +286,6 @@
         margin-bottom: 2rem;
     }
 
-    /* 3. Give the text room to breathe */
     #textBlock {
         width: 100%;
         padding: 0;
@@ -334,7 +314,6 @@
 
     dialog img {
         border-radius: .5rem;
-        /* Much sharper corners for mobile */
     }
 
 
@@ -418,25 +397,22 @@
 @media (max-width: 1043px) {
     .gridEval-minimoto {
         display: grid;
-        /* Change to a single column for stacking */
         grid-template-columns: 1fr; 
-        gap: 1.5rem; /* Slightly larger gap looks better when stacked */
+        gap: 1.5rem;
         margin-bottom: 0.5rem;
     }
 
     .gridEval-minimoto img {
-        /* Remove fixed height so they aren't squashed */
         height: auto; 
         width: 100%;
         object-fit: cover;
-        border-radius: 0.5rem; /* Slightly rounder corners for a modern mobile look */
+        border-radius: 0.5rem;
     }
 }
 /**SATCUBE MEDIA QUERIES 1100px**/
 /**SATCUBE MEDIA QUERIES 1800px**/
 
 @media (max-width: 1800px) {
-    /* 1. Hide the desktop sidebars */
     .introSideBar, 
     .showcasing-sidebar, 
     .Evaluate-sidebar,
@@ -455,22 +431,17 @@
     .introContainer{
         padding: 1rem 20px
     }
-    /* 2. Anchor the container */
     .image-interactive-wrapper {
         position: relative;
         width: 100%;
-        display: block; /* Ensures it takes up space */
+        display: block;
     }
 
-    /* 3. Global Button Style */
-/* 2. Global Button Styles */
     .image-interactive-wrapper .mobile-info-trigger {
         display: flex;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        
-        /* Make sure these sizes are not 0 */
         width: 45px;
         height: 45px;
 
@@ -478,7 +449,7 @@
         color: var(--text-color);
         border-radius: 50%;
         border: none;
-        z-index: 999; /* Put it in front of the image */
+        z-index: 999;
         justify-content: center;
         align-items: center;
         animation: pulse 2s infinite;
@@ -514,7 +485,6 @@
         left: -15px;
     }
 
-    /* 5. The Popup Appearance */
     .mobile-sidebar-popup {
         width: 90%;
         border: none;
@@ -565,19 +535,13 @@
 
     /**Intro roles o challange text**/
     .introContentWrapper {
-        flex-direction: column; /* This is the magic line that stacks them */
-        gap: 1.5rem;            /* Adjust the space between stacked boxes */
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .boxRole, .boxProblem {
-        width: 100%;            /* Force them to take full width */
+        width: 100%;
     }
-/*
-    .boxRole {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 1rem 0;
-    }*/
 
     /**Intro roles o challange text**/
 
@@ -588,7 +552,7 @@
 
     #frontSatcube {
     width: 100%;
-    height: 340px; /* Adjust this to change how much of the image shows */
+    height: 340px;
     overflow: hidden;
     }
 
@@ -605,19 +569,18 @@
     }
 
     .scroll-container {
-    width: 100%;           /* The scroll area is as wide as your content */
-    overflow-x: auto;      /* This enables the horizontal scrollbar */
+    width: 100%;
+    overflow-x: auto;
     padding: 1rem 0;
     
-    /* Optional: Improves scroll feel on mobile devices */
     -webkit-overflow-scrolling: touch; 
     }
 
     #manual2 {
         display: block;
-        width: auto;           /* Do NOT use 100% here */
-        max-width: none;       /* This prevents the browser from forcing it to shrink */
-        height: 250px;         /* Set a fixed height that fits your layout */
+        width: auto;
+        max-width: none;
+        height: 250px;
     }
 
 

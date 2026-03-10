@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2000; /* Ensure this is higher than the project-wheel (1000) */
-    pointer-events: auto; /* Ensure you can still click the links */
+    z-index: 2000;
+    pointer-events: auto;
 }
 
 .projects-section {
@@ -41,36 +41,32 @@
     color: inherit;
     margin-bottom: 4rem;
 
-    /* INITIAL HIDDEN STATE */
     opacity: 0;
     transform: translateY(30px) translateZ(0);
 
-    /* Unified transition for all states */
     transition:
         opacity 1s ease-out,
         transform 1s cubic-bezier(0.2, 1, 0.3, 1),
         background-color 0.3s ease;
     pointer-events: none;
 
-    overflow: hidden; /* This is the most important line */
-    isolation: isolate; /* Forces a clean stacking context */
-    mask-image: -webkit-radial-gradient(white, black); /* Fixes a specific Safari bug with border-radius + overflow */
+    overflow: hidden;
+    isolation: isolate;
+    mask-image: -webkit-radial-gradient(white, black);
 
     /**BOARDER RIM POP**/
-    border: 0px solid rgba(255, 255, 255, 0.575); /* Only 8% white */
-    background-color: var(--backgrund-body-2); /* Use your lighter grey */
+    border: 0px solid rgba(255, 255, 255, 0.575);
+    background-color: var(--backgrund-body-2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     /**BOARDER RIM POP**/
 }
 
-/* THE APPEAR STATE (Triggered by JS) */
 .project-card.appear {
     opacity: 1; 
     transform: translateY(0) translateZ(0);
     pointer-events: auto;
 }
 
-/* THE HOVER STATE (Only active once appeared) */
 .project-card.appear:hover {
     transform: translateY(-10px) translateZ(0);
     transition-delay: 0s;
@@ -80,7 +76,6 @@
     transition: transform 0.5s ease-out, opacity 1.2s ease-out;
 }
 
-/* Only change background color on hover */
 .project-card.appear:hover .project-info {
     background-color: rgba(30, 30, 30, 0.8);
 }
@@ -88,7 +83,6 @@
 .project-image {
     width: 100%;
     height: 400px;
-    /* Increased height for better product showcase */
     display: block;
 }
 
@@ -122,10 +116,9 @@
     outline: 1px solid transparent;
     backface-visibility: hidden;
 
-    border-bottom-left-radius: inherit; /* Matches the card exactly */
+    border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     
-    /* Ensure there's no tiny 1px gap */
     margin-bottom: -1px; 
     width: 101%; 
     left: -0.5%;
@@ -169,10 +162,8 @@
     transform: translateY(-20px);
     z-index: 1000;
     opacity: 0;
-    /* transition: transform 0.6s ... (ONLY transition the movement) */
 }
 
-/* NEW: The class the JS will add */
 #project-wheel.visible {
     opacity: 1;
     visibility: visible;
@@ -183,14 +174,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* MUST match the 70px logic in JS (40 height + 30 gap) */
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     align-items: flex-start;
 }
 
 .wheel-item {
     height: 40px;
-    /* Fixed height is crucial for accuracy */
     display: flex;
     align-items: center;
     gap: 15px;
@@ -365,7 +354,6 @@
     transition: opacity 2s ease, transform 2s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* The state triggered by JS */
 .sideProjectGrid img.appear {
     opacity: 1;
     transform: translateY(0);
@@ -456,9 +444,9 @@
 
 .dialog-content {
     display: flex;
-    flex-direction: column-reverse; /* Stacks text on top of image */
+    flex-direction: column-reverse;
     align-items: center;
-    gap: 15px; /* Space between title and image */
+    gap: 15px;
 }
 
 #dialogTitle {
@@ -486,14 +474,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-evenly; /* Centers icons horizontally */
+    justify-content: space-evenly;
 
     gap: 1rem;
     padding: 1rem;
     border-radius: .3rem;
     width: 90%;
     max-width: 1200px;
-    /*background-color: var(--backgrund-body-2);*/
     margin-top: 2rem;
 
 
@@ -522,11 +509,11 @@
 .icon-badge {
     background-color: var(--base-color);
     padding: 0px;
-    border-radius: .2rem; /* Slightly rounded, 0.1rem is almost sharp */
+    border-radius: .2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;  /* Set these to be slightly larger than your icon */
+    width: 36px;
     height: 33px;
     transition: background-color 0.3s ease;
 }
@@ -537,20 +524,18 @@
 }
 
 .icon-wrapper svg {
-    width: 30px; /* Force the icon to fit comfortably inside the circle */
+    width: 30px;
     height: 30px;
 }
 
 .icon-wrapper:hover {
-    transform: scale(3); /* Scales the whole wrapper up by 15% */
+    transform: scale(3);
 }
 
-/* Optional: Make the background badge brighten on hover */
 .icon-wrapper:hover .icon-badge {
-    background-color: var(--base-color); /* Slightly lighter on hover */
+    background-color: var(--base-color);
 }
 
-/* Ensure the wrapper doesn't jump when the text appears */
 .icon-wrapper {
     display: flex;
     flex-direction: column;
@@ -561,11 +546,11 @@
 .icon-spacer {
     background-color: var(--base-color);
     padding: 0px;
-    border-radius: .2rem; /* Slightly rounded, 0.1rem is almost sharp */
+    border-radius: .2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5px;  /* Set these to be slightly larger than your icon */
+    width: 5px;
     height: 33px;
     transition: background-color 0.3s ease;
     margin: 0 .5rem;
@@ -600,9 +585,9 @@
 .oters-icon-row {
     display: flex;
     justify-content: center;
-    align-items: center;     /* Align icons vertically within the row */
-    gap: 2rem;             /* Space between icons in the same row */
-    flex-wrap: wrap;         /* Allows icons to wrap if the phone is tiny */
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 
 }
 
@@ -617,7 +602,7 @@
         display: none;
     }
     .mobile-icon-container {
-        display: flex; /* Or 'block', depending on your layout needs */
+        display: flex;
         flex-direction: column;
     }
 }

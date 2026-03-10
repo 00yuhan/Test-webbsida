@@ -1,83 +1,23 @@
 
 
-body {
-    background-color: var(--backgrund-body-2);
-}
-
-/*navigationbar*/
-
 header {
-    position: fixed; /* fixed keeps it above everything */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 1rem 2rem;
    background-color: var(--backgrund-body-2);
 }
 
-header.is-solid {
-    background-color:  var(--text-color);
-    backdrop-filter: blur(8px);
-}
-
-header nav ul{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    gap: 2em;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    font-size: 1.2rem;
-}
-
-header nav li {
-    font-family: Inter;
-    color: var(--text-navbar);
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-header nav a {
-    text-decoration: none;
-    color: var(--text-navbar);
-    font-family: Inter;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-header nav a:hover {
-    color:var(--hover-color)
-}
-
-
-nav li:first-child{
-    margin-right: auto;
-    font-family: Inter;
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--text-navbar);
-}
-
 #frontImage {
-    display: flex;          /* Enables flexbox */
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center;     /* Centers the image vertically (if needed) */
-    width: 100%;             /* Ensures the container spans the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     margin-top: 4rem;
 }
 
-/*content*/
 #frontImage img {
     width: 100%;
     height: 65vh;
     object-fit: cover;
     object-position: 50% 50%;
 }
-
-/*Text under hero image*/
 
 .motionTag {
     text-decoration: underline;
@@ -98,10 +38,10 @@ nav li:first-child{
 
 
 .introContainer {
-    display: block;          /* Changed from flex to block */
-    position: relative;      /* Allows the sidebar to anchor to this container */
-    max-width: 1200px;       /* This defines your "Centerline" width */
-    margin: 0 auto;          /* Centers the main container */
+    display: block;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
     color: var(--base-color);
     font-family: Inter;
@@ -110,9 +50,9 @@ nav li:first-child{
 }
 
 .introTextContent {
-    width: 100%;              /* Fills the 1200px container */
-    max-width: 1000px;        /* Keeping text at a readable width */
-    margin: 0 auto;          /* Centers the text inside the 1200px container */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .introContentWrapper{
@@ -166,8 +106,8 @@ nav li:first-child{
 
 .fullWidthImage {
     width: 100%;
-    display: block; /* This removes the "ghost" gap at the bottom of images */
-    margin-bottom: 0; /* Let the heading's margin handle the spacing */
+    display: block;
+    margin-bottom: 0;
     border-radius: 1rem;
 }
 
@@ -193,7 +133,6 @@ nav li:first-child{
     font-style: italic;
     opacity: .4;
     padding-top: .5rem;
-    /* Your specific styles here */
 }
 
 .introSideBar2 p:last-of-type {
@@ -201,7 +140,6 @@ nav li:first-child{
     font-style: italic;
     opacity: .4;
     padding-top: .5rem;
-    /* Your specific styles here */
 }
 
 
@@ -237,8 +175,8 @@ nav li:first-child{
 }
 
 .Evaluate-sidebar {
-    position: absolute;      /* Take it out of the normal flow */
-    left: -15em;             /* Push it to the left, outside the container */
+    position: absolute;
+    left: -15em;
     width: 18em;
     margin-top: 10rem;
 }
@@ -273,8 +211,8 @@ nav li:first-child{
 
 
 .showcasing-sidebar {
-    position: absolute;      /* Take it out of the normal flow */
-    left: -15em;             /* Push it to the left, outside the container */
+    position: absolute;
+    left: -15em;
     width: 18em;
     margin-top: 50rem;
 }
@@ -290,14 +228,13 @@ nav li:first-child{
 }
 
 /**DIALOG DIALOG POPUP**/
-/* Style for the pop-up backdrop */
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better focus */
-    backdrop-filter: blur(10px);           /* Increased blur for a cleaner look */
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
 }
 
 dialog {
-    border: none !important;    /* Added !important to kill the silver border */
+    border: none !important;
     outline: none !important;
     border-radius: 1rem;
     padding: 0;
@@ -308,22 +245,20 @@ dialog {
     transform: translate(-50%, -50%); 
     margin: 0;
 
-    max-width: 90vw;            /* Slightly wider for better viewing */
+    max-width: 90vw;
     max-height: 90vh;
     background: transparent; 
-    overflow: visible;          /* CHANGED: This allows the title to show outside the box */
+    overflow: visible;
 }
 
-/* NEW: This handles the stacking of Title and Image */
 .dialog-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;                  /* Space between title and image */
+    gap: 15px;
 }
 
-/* NEW: Styles the optional title */
 #dialogTitle {
     color: white;
     font-family: 'Inter', sans-serif;
@@ -339,10 +274,10 @@ dialog img {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 80vh;          /* CHANGED: Shrunk slightly to make room for text */
+    max-height: 80vh;
     object-fit: contain;
     border-radius: 1rem;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5); /* Adds depth */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
 /**DIALOG DIALOG POPUP**/
@@ -442,15 +377,15 @@ dialog img {
 
 
 .SidebarSlots {
-    position: absolute;      /* Take it out of the normal flow */
-    left: -15em;             /* Push it to the left, outside the container */
+    position: absolute;
+    left: -15em;
     width: 18em;
     margin-top: 5rem;
 }
 
 .SidebarSlot {
-    position: absolute;      /* Take it out of the normal flow */
-    left: -15em;             /* Push it to the left, outside the container */
+    position: absolute;
+    left: -15em;
     width: 18em;
     margin-top: 18rem;
 }
@@ -471,15 +406,15 @@ dialog img {
 }
 
 .introSideBar2 {
-    position: absolute;      /* Take it out of the normal flow */
-    right: -15em;             /* Push it to the left, outside the container */
+    position: absolute;
+    right: -15em;
     width: 18em;
     margin-top: 15rem;
 }
 
 .introSideBar {
-    position: absolute;      /* Take it out of the normal flow */
-    left: -15em;             /* Push it to the left, outside the container */
+    position: absolute;
+    left: -15em;
     width: 18em;
     margin-top: 15rem;
 }

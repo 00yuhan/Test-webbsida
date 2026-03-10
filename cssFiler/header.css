@@ -54,11 +54,9 @@ nav li:first-child{
 }
 
 /**Hamburger meny**/
-
-/* --- Base Navbar Styling --- */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Pushes logo to left, links to right */
+    justify-content: space-between;
     align-items: center;
     padding: 0rem 0rem;
 }
@@ -70,7 +68,6 @@ nav li:first-child{
     margin: 0;
 }
 
-/* 1. Desktop: Hide the toggle button */
 .menu-toggle {
     display: none;
     cursor: pointer;

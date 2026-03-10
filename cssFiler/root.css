@@ -1,5 +1,4 @@
 :root {
-
     --base-color: #cccbca;
     --backgrund-body:#141414;
     --backgrund-body-gradient:#1f1e1e;
@@ -12,15 +11,8 @@
     
     --header-bg-color: 45, 45, 45; 
     --header-bg-alpha-start: 0;
-    --header-bg-alpha-end: 1; /* 0.95 looks better than 1 with blur */
-    --header-blur-max: 10;
-
-    /**
-    --header-bg-color: 68, 68, 68;
-    --header-bg-alpha-start: 0;
     --header-bg-alpha-end: 1;
     --header-blur-max: 10;
-    *//
 }
 
 *{
@@ -36,14 +28,13 @@ html {
 
 body {
     background-color: var(--backgrund-body-2);
-    overflow-x: hidden; /* Prevents side-scrolling */
+    overflow-x: hidden;
     width: 100%;
 }
 
-/* Removes the blue highlight on tap */
 * {
     -webkit-tap-highlight-color: transparent;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Fallback for older browsers */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 

@@ -15,7 +15,7 @@
     pointer-events: none;
 
     transition: opacity 0.6s ease, visibility 0.6s ease;
-    opacity: 0; /* Hidden by default */
+    opacity: 0;
 }
 
 .project-nav-controls {
@@ -32,9 +32,6 @@
 .scroll-indicator:hover{
     color: var(--hover-color);
 }
-
-
-/*fade arrows when scroll*/
 
 .sticky-wrapper.is-active {
     opacity: 1;
