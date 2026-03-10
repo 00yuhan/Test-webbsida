@@ -82,7 +82,7 @@
 }
 
 
-
+/** START 768 768 768 768 768 768 768 START**/
 /* PHONES (The "All-in-One" Mobile Fix) */
 @media (max-width: 768px) {
 
@@ -268,6 +268,10 @@
         font-size: 1.6rem;
     }
 
+    h3 {
+        font-size: 1.2rem;
+    }
+
     p {
         font-size: .8rem;
         line-height: 1rem;
@@ -353,7 +357,64 @@
     }
     /**DIALOG**/
 
+
+
+        .demoVideo {
+    border-radius: .5rem;
+    }
+
+    .grid-item .the-tool-border {
+        border-radius: .5rem;
+    }
+
+    .SidebarVideo {
+    border-radius: .5rem;
+    }
+
+    .SidebarVideo2 {
+    border-radius: .5rem;
+    }
+
+    #moodboard,
+    #sketches,
+    #cadmodel,
+    #cadmodel2,
+    #resultImg,
+    #cadmodelAI,
+    #mockup1,
+    #mockup2,
+    #stormockup,
+    #mockup4,
+    #UAMdfram,
+    #UAMFotsteg,
+    #UAMnatt
+     {
+        height: auto;
+        border-radius: .3rem;
+    }
+
+    #frontImage img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    #resultImg {
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .introTitle {
+    margin: auto;
+    padding-bottom: 2rem;
+    padding-top: 0rem;
+    font-size: 1.6rem;
+    }
+
 }
+
+
+/** SLUT 768 768 768 768 768 768 768 SLUT**/
+
 @media (max-width: 1043px) {
     .gridEval-minimoto {
         display: grid;
@@ -583,49 +644,5 @@
         text-align: justify;
         line-height: 1.2rem;
         margin-top: .5rem;
-    }
-
-    .demoVideo {
-    border-radius: .5rem;
-    }
-
-    .grid-item .the-tool-border {
-        border-radius: .5rem;
-    }
-
-    .SidebarVideo {
-    border-radius: .5rem;
-    }
-
-    .SidebarVideo2 {
-    border-radius: .5rem;
-    }
-
-    #moodboard,
-    #sketches,
-    #cadmodel,
-    #cadmodel2,
-    #resultImg,
-    #cadmodelAI,
-    #mockup1,
-    #mockup2,
-    #stormockup,
-    #mockup4,
-    #UAMdfram,
-    #UAMFotsteg,
-    #UAMnatt
-     {
-        height: auto;
-        border-radius: .3rem;
-    }
-
-    #frontImage img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-    #resultImg {
-    height: 100%;
-    object-fit: cover;
     }
 }

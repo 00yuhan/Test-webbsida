@@ -480,6 +480,146 @@
 /**POPOUP DIALOG **/
 
 
+/**START ICON CONTAINER ICON CONTAINER ICON CONTAINER START**/
 
+.icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly; /* Centers icons horizontally */
+
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .3rem;
+    width: 90%;
+    max-width: 1200px;
+    /*background-color: var(--backgrund-body-2);*/
+    margin-top: 2rem;
+
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.icon-container.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-wrapper svg {
+    width: 30px; 
+    height: 30px;
+}
+
+.icon-badge {
+    background-color: var(--base-color);
+    padding: 0px;
+    border-radius: .2rem; /* Slightly rounded, 0.1rem is almost sharp */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;  /* Set these to be slightly larger than your icon */
+    height: 33px;
+    transition: background-color 0.3s ease;
+}
+
+.icon-wrapper {
+    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    will-change: transform;
+}
+
+.icon-wrapper svg {
+    width: 30px; /* Force the icon to fit comfortably inside the circle */
+    height: 30px;
+}
+
+.icon-wrapper:hover {
+    transform: scale(3); /* Scales the whole wrapper up by 15% */
+}
+
+/* Optional: Make the background badge brighten on hover */
+.icon-wrapper:hover .icon-badge {
+    background-color: var(--base-color); /* Slightly lighter on hover */
+}
+
+/* Ensure the wrapper doesn't jump when the text appears */
+.icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-spacer {
+    background-color: var(--base-color);
+    padding: 0px;
+    border-radius: .2rem; /* Slightly rounded, 0.1rem is almost sharp */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5px;  /* Set these to be slightly larger than your icon */
+    height: 33px;
+    transition: background-color 0.3s ease;
+    margin: 0 .5rem;
+}
+
+
+.mobile-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    width: 90%;
+    border-radius: .5rem;
+    margin-top: 2rem;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.mobile-icon-container.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cad-icon-row, 
+.surface-icon-row, 
+.adobe-icon-row, 
+.oters-icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;     /* Align icons vertically within the row */
+    gap: 2rem;             /* Space between icons in the same row */
+    flex-wrap: wrap;         /* Allows icons to wrap if the phone is tiny */
+
+}
+
+/**END ICON CONTAINER ICON CONTAINER ICON CONTAINER END**/
+
+    .mobile-icon-container {
+        display: none;
+    }
+
+@media (max-width: 1100px) {
+    .icon-container {
+        display: none;
+    }
+    .mobile-icon-container {
+        display: flex; /* Or 'block', depending on your layout needs */
+        flex-direction: column;
+    }
+}
 
 

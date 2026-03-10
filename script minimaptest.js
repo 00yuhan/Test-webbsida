@@ -125,6 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
         projectRevealObserver.observe(img);
     });
 
+    const iconContainer = document.querySelector('.icon-container');
+    if (iconContainer) {
+        projectRevealObserver.observe(iconContainer);
+    }
+
+    const mobileiconContainer = document.querySelector('.mobile-icon-container');
+    if (mobileiconContainer) {
+        projectRevealObserver.observe(mobileiconContainer);
+    }
+
     // Handle Sticky Arrow Visibility
     const arrowObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
