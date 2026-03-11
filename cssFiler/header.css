@@ -54,6 +54,8 @@ nav li:first-child{
 }
 
 /**Hamburger meny**/
+
+
 .navbar {
     display: flex;
     justify-content: space-between;

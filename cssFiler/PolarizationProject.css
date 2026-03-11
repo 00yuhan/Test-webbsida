@@ -412,7 +412,7 @@ dialog img {
 }
 
 .mainText {
-    text-align: justify;
+    text-align: start;
 }
 
     .gradient-section #ringlight, #magnetic, #friction, #buttons, #twist, #prototypes {
@@ -431,4 +431,9 @@ dialog img {
 
 .grid-item .template-border {
     border-radius: 1rem;
+}
+
+#polar-uppdelad {
+    margin-bottom: 1rem;
+    height: 35rem;
 }

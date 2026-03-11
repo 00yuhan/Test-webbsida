@@ -142,14 +142,13 @@ header {
 
 .textSidebar {
     font-size: .8rem;
-    text-align: justify;
+    text-align: start;
     line-height: 1.2rem;
-    margin-top: .5rem;
+    padding-top: 0.5rem;
 }
 
 #disclaimer {
     font-size: .8rem;
-    margin-top: 0rem;
     font-style: italic;
     opacity: .4;
 }
@@ -325,14 +324,8 @@ dialog img {
 
 .disclaimer2 {
     font-size: .8rem;
-    margin-top: 0rem;
-    margin-bottom: .5rem;
     font-style: italic;
     opacity: .4;
-}
-
-.bottomSpacer {
-    height: 15rem;
 }
 
 .gradient-section {
@@ -354,4 +347,5 @@ dialog img {
     padding-bottom: 10rem; 
     margin-top: 2rem;
 }
+
 

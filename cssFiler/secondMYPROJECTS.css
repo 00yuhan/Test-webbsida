@@ -299,6 +299,15 @@
     align-items: center;
 }
 
+.button-container-header {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
 .cv-button {
     padding: .5rem .5rem;
     background-color: transparent;
@@ -544,16 +553,14 @@
 }
 
 .icon-spacer {
-    background-color: var(--base-color);
-    padding: 0px;
+    background-color: var(--text-color);
     border-radius: .2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5px;
-    height: 33px;
-    transition: background-color 0.3s ease;
-    margin: 0 .5rem;
+    width: 4px;
+    height: 30px;
+    flex-shrink: 0;
 }
 
 
@@ -607,4 +614,29 @@
     }
 }
 
+    .hero-lead,
+    .hero-value,
+    .hero-status {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
 
+    .hero-text {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 65ch;
+    }
+
+
+.hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.hi-hero {
+    font-size: .5rem;
+}
+
+.lead-hero {
+    font-size: .5rem;
+}

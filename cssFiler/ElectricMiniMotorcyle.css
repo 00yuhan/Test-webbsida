@@ -383,7 +383,7 @@ dialog img {
 }
 
 .mainText {
-    text-align: justify;
+    text-align: start;
 }
 
 .gradient-section {
