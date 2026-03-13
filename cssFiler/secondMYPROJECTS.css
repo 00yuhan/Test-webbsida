@@ -450,8 +450,7 @@
     flex-direction: column-reverse;
     align-items: start;
     max-width: 100vw;
-    color: white;
-    gap: 15px;
+    height: 100%;
 }
 
 #dialogTitle {
@@ -460,7 +459,6 @@
     font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: 1px;
-    margin: 0;
     animation: fadeIn 0.5s ease; 
 }
 
@@ -485,6 +483,7 @@
     margin: 0;
     object-fit: contain;
     outline: none;
+    min-height: min-content;
 }
 
 .media-container {
@@ -511,7 +510,7 @@
     .media-container {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        min-height: min-content;
     }
 
     #fullImage, #dialogVideo {
