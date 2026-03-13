@@ -183,10 +183,12 @@
 
                         I made this for my cousin when she got her driver's license. Everything was modeled in Blender. Fun fact: it requires no supports when printed."
                         onclick="openImage(this)">
+
                     <img src="bilder/sideProjects/kruksupport/Kruksupport.webp"
                         data-title="Stabilizer Stand
                     
                     Compatible with Clas Ohlson pedestal. Fits snuggly on top, makes the pedestal much more rigid and you can put things on top :)." onclick="openImage(this)">
+
                     <img src="bilder/sideProjects/koksmobilhallare/koksmobilhallare.webp"
                         data-title="Phone and Recipe Book Holder.
 
@@ -197,11 +199,32 @@
                     
                     Initially made for when I'm printing or doing other things that emit VOCs, but I realized it works great as a robust and efficient everyday purifier if needed. It's possible to change the filters and the activated carbon."
                         onclick="openImage(this)">
-                </div>
 
+                    <img src="bilder/sideProjects/barnvagns reservdel/Barnvagns-reservdel.webp"
+                        data-title="Stroller Spare Part
+                    
+                    I reverse-engineered a custom spare part for a Bugaboo stroller, designed for a snug and secure fit onto the chassis and handlebar. To keep durability and structural integrity, I decided to simplify the design by removing the original rotating mechanism, resulting in a robust, fixed-position component. (This feature is not used anyways //customer)
+
+                    The design was specifically optimized for FDM 3D printing in PLA. Key considerations included print orientation and breaking the model down into smaller sub-assemblies to maximize strength and better print quality, and developing a custom hinge mechanism for the latch."
+                        data-video="bilder/sideProjects/barnvagns reservdel/film/Reservdel-barnvagn.mp4"
+                        onclick="openImage(this)">
+
+                    <img src="bilder/sideProjects/AquFilter/aqua-filter.webp"
+                        data-title="Aquarium Gravel Filter
+                    
+                    This project is a custom modification for a standard sponge filter. By replacing the sponge with a container filled with mineral-rich gravel, the system pulls water through the substrate to provide both mechanical and biological filtration. Most importantly, this design enriches and buffers the water with essential minerals and nutrients, helping to maintain a stable and balanced aquatic ecosystem."
+                        onclick="openImage(this)">
+
+
+                </div>
                 <dialog id="imageDialog" onclick="if(event.target==this) this.close()">
                     <div class="dialog-content">
-                        <h3 id="dialogTitle"></h3><img id="fullImage" src="" alt="Full view">
+                        <h3 id="dialogTitle"></h3>
+                        <div class="media-container">
+                            <img id="fullImage" src="bilder/sideProjects/barnvagns reservdel/Barnvagns-reservdel.webp"
+                                alt="Full view">
+                            <video id="dialogVideo" controls loop muted playsinline></video>
+                        </div>
                     </div>
                 </dialog>
 

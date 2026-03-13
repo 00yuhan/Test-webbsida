@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projectRevealObserver.observe(card);
     });
 
-    document.querySelectorAll('.sideProjectGrid img').forEach(img => {
+    document.querySelectorAll('.sideProjectGrid img, .sideProjectGrid .video-container').forEach(img => {
         projectRevealObserver.observe(img);
     });
 

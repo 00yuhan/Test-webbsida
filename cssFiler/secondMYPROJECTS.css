@@ -334,6 +334,7 @@
 
 /** side projects section**/
 
+
 #sideProjects {
     max-width: auto;
     margin: 0 auto;
@@ -355,24 +356,27 @@
     transition: transform 1s ease;
     cursor: pointer;
     margin-bottom: 20px;
-}
 
-.sideProjectGrid img {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 2s ease, transform 2s cubic-bezier(0.2, 1, 0.3, 1);
+
+    pointer-events: none;
+
+    overflow: hidden;
+    isolation: isolate;
+    mask-image: -webkit-radial-gradient(white, black);
 }
 
 .sideProjectGrid img.appear {
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 .sideProjectGrid img.appear:hover {
     transform: translateY(-10px) translateZ(0);
-
     transition-delay: 0s;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
 #sideProjectsW {
@@ -420,13 +424,13 @@
 .dialog-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: justify;
+    justify-content: justify;
     min-height: auto;
-
-    padding: 1rem;
+    padding: 0rem;
     border-radius: 10px;
 }
+
 
 #imageDialog img {
     width: 100%;
@@ -435,26 +439,18 @@
     border-radius: 1rem;
 }
 
+
 #dialogTitle {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-align: justify;
+    white-space: pre-line;
+    text-align: start;
 }
-
-#fullImage {
-    max-width: 100%;
-    max-height: 85vh;
-    border-radius: 1rem;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/**Dialog content**/
 
 .dialog-content {
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: start;
+    max-width: 100vw;
+    color: white;
     gap: 15px;
 }
 
@@ -466,6 +462,62 @@
     letter-spacing: 1px;
     margin: 0;
     animation: fadeIn 0.5s ease; 
+}
+
+#fullImage {
+    display: block;
+    margin: 0;      /* Ensure image has no ghost margins */
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+#fullImage {
+    pointer-events: none;
+}
+
+#dialogVideo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin: 0;
+    object-fit: contain;
+    outline: none;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-height: 70vh;
+    width: 100%;
+}
+
+#dialogVideo{
+    pointer-events: auto;
+    outline: none;
+}
+
+/**Dialog content**/
+
+
+
+
+@media screen and (max-width: 1300px) {
+    .media-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #fullImage, #dialogVideo {
+        width: 100%;
+        max-height: auto;
+    }
 }
 
 @keyframes fadeIn {
@@ -494,13 +546,24 @@
 
 
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.2, 1, 0.3, 1);
+    transform: translateY(30px) translateZ(0);
+
+    transition:
+        opacity 1s ease-out,
+        transform 1s cubic-bezier(0.2, 1, 0.3, 1),
+        background-color 0.3s ease;
+    pointer-events: none;
 }
 
 .icon-container.appear {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; 
+    transform: translateY(0) translateZ(0);
+    pointer-events: auto;
+}
+
+.icon-container.appear:hover {
+    transform: translateY(-10px) translateZ(0);
+    transition-delay: 0s;
 }
 
 .icon-wrapper {
@@ -640,3 +703,7 @@
 .lead-hero {
     font-size: .5rem;
 }
+
+/**Stacked video in side projects**/
+
+

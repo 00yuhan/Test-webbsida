@@ -1,49 +1,89 @@
-const dialog = document.getElementById('imageDialog');
-const fullImg = document.getElementById('fullImage');
+/**
+ * ROBUST DIALOG HANDLER
+ * Works on any page, whether it has videos or just images.
+ */
 
-function openImage(imgElement) {
-    const dialog = document.getElementById('imageDialog');
-    const fullImg = document.getElementById('fullImage');
-    const titleText = document.getElementById('dialogTitle');
+// 1. Helper to toggle scroll lock (Targets both body and html)
+const toggleScrollLock = (shouldLock) => {
+    const style = shouldLock ? 'hidden' : '';
+    document.body.style.overflow = style;
+    document.documentElement.style.overflow = style;
+};
 
-    if (!dialog || !fullImg) return;
-
-    // 1. Set the image
-    fullImg.src = imgElement.src; 
-    
-    // 2. ONLY set the title if the 'dialogTitle' element exists in your HTML
-    if (titleText) {
-        const title = imgElement.getAttribute('data-title');
-        titleText.innerText = title || ""; 
-        // Hide the element entirely if there's no text to show
-        titleText.style.display = title ? "block" : "none";
-    }
-    
-    dialog.showModal(); 
-}
-
-// Function to open any dialog by its ID
-function openSidebar(id) {
-    const dialog = document.getElementById(id);
-    if (dialog) {
-        dialog.showModal(); // This is the built-in magic for popups
-    }
-}
-
-// Function to close any dialog by its ID
-function closeSidebar(id) {
-    const dialog = document.getElementById(id);
-    if (dialog) {
-        dialog.close();
-    }
-}
-
-// Close dialog when clicking on the backdrop (the dark area)
-const allDialogs = document.querySelectorAll('dialog');
-allDialogs.forEach(dialog => {
+// 2. Setup closing behavior for ALL dialogs
+document.querySelectorAll('dialog').forEach(dialog => {
+    // Close on backdrop click
     dialog.addEventListener('click', (e) => {
-        if (e.target === dialog) {
-            dialog.close();
+        if (e.target === dialog) dialog.close();
+    });
+
+    // Cleanup when ANY dialog closes
+    dialog.addEventListener('close', () => {
+        toggleScrollLock(false); // Re-enable scroll
+
+        // Only try to clean up video if a video element actually exists in this dialog
+        const video = dialog.querySelector('video');
+        if (video) {
+            video.pause();
+            video.currentTime = 0;
+            video.src = "";
+            video.load(); // Reset to prevent grey screen
         }
     });
 });
+
+// 3. Open Image/Video Dialog
+function openImage(element) {
+    const dialog = document.getElementById('imageDialog');
+    if (!dialog) return; // Exit if the main dialog doesn't exist on this page
+
+    toggleScrollLock(true); // Lock scroll
+
+    // Elements inside the dialog
+    const fullImage = document.getElementById('fullImage');
+    const dialogVideo = document.getElementById('dialogVideo');
+    const dialogTitle = document.getElementById('dialogTitle');
+
+    // Handle Image
+    if (fullImage) {
+        fullImage.src = element.src;
+    }
+
+    // Handle Title
+    if (dialogTitle) {
+        const title = element.getAttribute('data-title');
+        dialogTitle.innerText = title || "";
+        dialogTitle.style.display = title ? "block" : "none";
+    }
+
+    // Handle Video (ONLY if video element exists on this page)
+    const videoSrc = element.getAttribute('data-video');
+    if (dialogVideo) {
+        if (videoSrc) {
+            dialogVideo.src = videoSrc;
+            dialogVideo.style.display = "block";
+            dialogVideo.load();
+            dialogVideo.play();
+        } else {
+            dialogVideo.style.display = "none";
+            dialogVideo.src = "";
+            dialogVideo.load();
+        }
+    }
+
+    dialog.showModal();
+}
+
+// 4. Sidebar helpers remain the same
+function openSidebar(id) {
+    const dialog = document.getElementById(id);
+    if (dialog) {
+        toggleScrollLock(true);
+        dialog.showModal();
+    }
+}
+
+function closeSidebar(id) {
+    const dialog = document.getElementById(id);
+    if (dialog) dialog.close();
+}

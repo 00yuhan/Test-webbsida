@@ -42,5 +42,10 @@ body {
     height: 100vh;
 }
 
+html:has(dialog[open]) {
+    overflow: hidden;
+    height: 100vh;
+}
+
 
 
