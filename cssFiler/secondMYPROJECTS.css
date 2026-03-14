@@ -469,6 +469,7 @@
     width: auto;
     object-fit: contain;
     border-radius: 1rem;
+    margin-bottom: 1rem;
 }
 
 #fullImage {
@@ -516,6 +517,7 @@
     #fullImage, #dialogVideo {
         width: 100%;
         max-height: auto;
+        margin-bottom: 0rem;
     }
 }
 
