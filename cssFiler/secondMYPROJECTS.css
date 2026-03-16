@@ -547,7 +547,7 @@
 
 
     opacity: 0;
-    transform: translateY(30px) translateZ(0);
+    transform: translateY(0px) translateZ(0);
 
     transition:
         opacity 1s ease-out,
@@ -563,7 +563,7 @@
 }
 
 .icon-container.appear:hover {
-    transform: translateY(-10px) translateZ(0);
+    transform: translateY(0px) translateZ(0);
     transition-delay: 0s;
 }
 
