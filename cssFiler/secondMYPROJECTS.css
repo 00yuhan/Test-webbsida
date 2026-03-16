@@ -707,4 +707,29 @@
 
 /**Stacked video in side projects**/
 
+html:has(dialog[open]) {
+    overflow: hidden;
+    height: 100vh;
+}
 
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    max-height: 85vh; /* Never taller than 85% of screen */
+    border-radius: 12px;
+    border: none;
+    margin: auto;     /* Centered on screen */
+    padding: 0;       /* IMPORTANT: No padding on the dialog itself */
+    overflow: hidden; /* Clips the container so the scrollbar works inside */
+}
+@media screen and (max-width: 1300px) {
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+    gap: 1rem;
+}
+}
