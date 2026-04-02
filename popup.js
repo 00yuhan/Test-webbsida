@@ -44,10 +44,12 @@ function openImage(element) {
     const dialogVideo = document.getElementById('dialogVideo');
     const dialogTitle = document.getElementById('dialogTitle');
 
-    // Handle Image
-    if (fullImage) {
-        fullImage.src = element.src;
-    }
+// Handle Image
+if (fullImage) {
+    // Look for data-full-src. If it's missing, just use the normal src.
+    const alternateImg = element.getAttribute('data-full-src');
+    fullImage.src = alternateImg ? alternateImg : element.src;
+}
 
     // Handle Title
     if (dialogTitle) {
