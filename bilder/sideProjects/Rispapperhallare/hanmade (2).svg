@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" width="960" height="200">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap');
+      .t { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 96px; fill: #2d2d2d; }
+    </style>
+  </defs>
+  <rect width="960" height="200" fill="#f9f7f2"/>
+  <text x="480" y="100" text-anchor="middle" dominant-baseline="central" class="t">汉 HANMADE</text>
+</svg>
